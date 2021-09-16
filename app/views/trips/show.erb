@@ -1,9 +1,8 @@
 <h1> Location: <%= @trip.location %> </h1>
 <h2> Date: <%= @trip.date %> </h2>
 
+<%= image_tag @trip.cover_photo %>
 <h2> Photos </h2>
-<% @trip.photos.each do |photo| %>
-    <li><%= link_to trip.location, trip_path(@user, trip) %></li>
- <% end %> <br>
+
 
  <%= link_to "Add a photo", new_photo_path(@trip) %> <br>
