@@ -7422,3 +7422,515 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 141ms (Views: 124.2ms | ActiveRecord: 2.1ms | Allocations: 5602)
 
 
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:40:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 9.2ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 104.0ms | Allocations: 4552)
+Completed 200 OK in 137ms (Views: 107.5ms | ActiveRecord: 5.1ms | Allocations: 6081)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:41:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 10.4ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 86.7ms | Allocations: 4496)
+Completed 200 OK in 101ms (Views: 89.1ms | ActiveRecord: 1.0ms | Allocations: 5416)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:41:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 7.4ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 4028)
+Completed 200 OK in 63ms (Views: 53.5ms | ActiveRecord: 1.2ms | Allocations: 4948)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:43:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 11.6ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 4078)
+Completed 200 OK in 74ms (Views: 60.8ms | ActiveRecord: 1.3ms | Allocations: 4998)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:43:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 11.1ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 149.8ms | Allocations: 4779)
+Completed 200 OK in 164ms (Views: 152.9ms | ActiveRecord: 1.5ms | Allocations: 5700)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:43:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 12.9ms | Allocations: 867)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Create (6.7ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["location", "Denver"], ["date", "Aug 2021"], ["user_id", 1], ["created_at", "2021-09-16 22:43:36.060880"], ["updated_at", "2021-09-16 22:43:36.060880"]]
+  [1m[36mTRANSACTION (27.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Create (1.8ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["location", "LA"], ["date", "Aug 2020"], ["user_id", 1], ["created_at", "2021-09-16 22:43:36.104556"], ["updated_at", "2021-09-16 22:43:36.104556"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location", "New York"], ["date", "May 2018"], ["created_at", "2021-09-16 22:43:36.126762"], ["updated_at", "2021-09-16 22:43:36.126762"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 177.0ms | Allocations: 17188)
+Completed 200 OK in 197ms (Views: 181.3ms | ActiveRecord: 1.4ms | Allocations: 18108)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:43:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (1.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 28.4ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 97.6ms | Allocations: 4044)
+Completed 200 OK in 110ms (Views: 98.6ms | ActiveRecord: 2.1ms | Allocations: 4964)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:43:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 8.5ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.4ms | Allocations: 4023)
+Completed 200 OK in 70ms (Views: 57.5ms | ActiveRecord: 1.7ms | Allocations: 4943)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:43:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 10.8ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 4058)
+Completed 200 OK in 79ms (Views: 60.9ms | ActiveRecord: 1.9ms | Allocations: 4978)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bill@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Create (7.5ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["location", "Denver"], ["date", "Aug 2021"], ["user_id", 1], ["created_at", "2021-09-16 22:44:58.142326"], ["updated_at", "2021-09-16 22:44:58.142326"]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Create (2.7ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["location", "LA"], ["date", "Aug 2020"], ["user_id", 1], ["created_at", "2021-09-16 22:44:58.172050"], ["updated_at", "2021-09-16 22:44:58.172050"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Create (2.6ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["location", "New York"], ["date", "May 2018"], ["user_id", 2], ["created_at", "2021-09-16 22:44:58.196571"], ["updated_at", "2021-09-16 22:44:58.196571"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:45:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 18.1ms | Allocations: 930)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 4162)
+Completed 200 OK in 97ms (Views: 79.9ms | ActiveRecord: 2.4ms | Allocations: 5083)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:51:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:6
+  Rendered users/show.erb within layouts/application (Duration: 45.8ms | Allocations: 1155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 99.9ms | Allocations: 5523)
+Completed 200 OK in 126ms (Views: 105.3ms | ActiveRecord: 3.2ms | Allocations: 7797)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:51:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:7
+  Rendered users/show.erb within layouts/application (Duration: 33.0ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 240.2ms | Allocations: 6644)
+Completed 200 OK in 256ms (Views: 244.6ms | ActiveRecord: 1.1ms | Allocations: 8304)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:51:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:7
+  Rendered users/show.erb within layouts/application (Duration: 35.4ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 4472)
+Completed 200 OK in 102ms (Views: 80.7ms | ActiveRecord: 1.8ms | Allocations: 6132)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:52:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 48.2ms | Allocations: 1133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 86.5ms | Allocations: 4507)
+Completed 200 OK in 112ms (Views: 95.8ms | ActiveRecord: 2.1ms | Allocations: 6167)
+
+
+Started GET "/trips/2.12" for 127.0.0.1 at 2021-09-16 17:52:14 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 26.1ms | Allocations: 6381)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 6451)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 2.6ms | Allocations: 7925)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+    1: <h1> Location: <%= @trip.location %> </h1>
+    2: <h2> Date: <%= @trip.date %> </h2>
+    3: 
+    4: <%= image_tag @trip.cover_photo %>
+    5: <h2> Photos </h2>
+    6: 
+    7: 
+  
+app/views/trips/show.erb:4
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 17:52:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 14.2ms | Allocations: 1133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.4ms | Allocations: 5008)
+Completed 200 OK in 141ms (Views: 118.1ms | ActiveRecord: 1.7ms | Allocations: 6673)
+
+
+Started GET "/trips/new.2" for 127.0.0.1 at 2021-09-16 17:52:37 -0500
+Processing by TripsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 9.9ms | Allocations: 1109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 125.3ms | Allocations: 5911)
+Completed 200 OK in 148ms (Views: 140.6ms | ActiveRecord: 0.0ms | Allocations: 6870)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 17:52:47 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver1", "date"=>"Ahg", "cover_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fffec19d298 @tempfile=#<Tempfile:/tmp/RackMultipart20210916-3911-keob61.png>, @original_filename="Untitled 4.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"trip[cover_photo]\"; filename=\"Untitled 4.png\"\r\nContent-Type: image/png\r\n">, "user_id"=>"1"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mTrip Create (9.4ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["location", "Denver1"], ["date", "Ahg"], ["user_id", 1], ["created_at", "2021-09-16 22:52:47.553937"], ["updated_at", "2021-09-16 22:52:47.553937"]]
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "5kr7n5wh5qfmmmlcacvaiaq221ns"], ["filename", "Untitled 4.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 6338473], ["checksum", "glMVb2C5jkiYkZMjW4JhHQ=="], ["created_at", "2021-09-16 22:52:47.601637"]]
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "cover_photo"], ["record_type", "Trip"], ["record_id", 13], ["blob_id", 1], ["created_at", "2021-09-16 22:52:47.608573"]]
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mTrip Update (0.2ms)[0m  [1m[33mUPDATE "trips" SET "updated_at" = ? WHERE "trips"."id" = ?[0m  [["updated_at", "2021-09-16 22:52:47.613333"], ["id", 13]]
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:15:in `create'
+[36m  Disk Storage (53.3ms) [0m[32mUploaded file to key: 5kr7n5wh5qfmmmlcacvaiaq221ns (checksum: glMVb2C5jkiYkZMjW4JhHQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f84125a5-b86d-4411-ad4e-98ae9dd73174) to Async(default) with arguments: #<GlobalID:0x00007f08b5225d98 @uri=#<URI::GID gid://travel-photos/ActiveStorage::Blob/1>>
+Redirected to http://127.0.0.1:3000/trips/13
+Completed 302 Found in 268ms (ActiveRecord: 24.2ms | Allocations: 35667)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f84125a5-b86d-4411-ad4e-98ae9dd73174] Performing ActiveStorage::AnalyzeJob (Job ID: f84125a5-b86d-4411-ad4e-98ae9dd73174) from Async(default) enqueued at 2021-09-16T22:52:47Z with arguments: #<GlobalID:0x00007f08b554da98 @uri=#<URI::GID gid://travel-photos/ActiveStorage::Blob/1>>
+Started GET "/trips/13" for 127.0.0.1 at 2021-09-16 17:52:47 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 16.8ms | Allocations: 2538)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f84125a5-b86d-4411-ad4e-98ae9dd73174] [36m  Disk Storage (53.9ms) [0m[34mDownloaded file from key: 5kr7n5wh5qfmmmlcacvaiaq221ns[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 6088)
+Completed 200 OK in 88ms (Views: 80.3ms | ActiveRecord: 1.7ms | Allocations: 7683)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f84125a5-b86d-4411-ad4e-98ae9dd73174] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f84125a5-b86d-4411-ad4e-98ae9dd73174]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f84125a5-b86d-4411-ad4e-98ae9dd73174]   [1m[36mActiveStorage::Blob Update (15.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f84125a5-b86d-4411-ad4e-98ae9dd73174]   [1m[36mTRANSACTION (13.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5a3ceda7dc253579f49271927ed0665168106d0f/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:52:47 -0500
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f84125a5-b86d-4411-ad4e-98ae9dd73174] Performed ActiveStorage::AnalyzeJob (Job ID: f84125a5-b86d-4411-ad4e-98ae9dd73174) from Async(default) in 215.12ms
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5a3ceda7dc253579f49271927ed0665168106d0f", "filename"=>"Untitled 4"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: 5kr7n5wh5qfmmmlcacvaiaq221ns (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png
+Completed 302 Found in 17ms (ActiveRecord: 0.7ms | Allocations: 1754)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:52:48 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Untitled 4"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 339)
+
+
+Started GET "/trips/13" for 127.0.0.1 at 2021-09-16 17:54:27 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrip Load (1.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  [1m[36mActiveStorage::Blob Load (3.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 49.3ms | Allocations: 2257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.4ms | Allocations: 5932)
+Completed 200 OK in 195ms (Views: 155.8ms | ActiveRecord: 5.8ms | Allocations: 7541)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:54:27 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Untitled 4"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/trips/13" for 127.0.0.1 at 2021-09-16 17:54:34 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 39.1ms | Allocations: 2239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 157.1ms | Allocations: 6204)
+Completed 200 OK in 178ms (Views: 164.3ms | ActiveRecord: 1.6ms | Allocations: 7793)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:54:34 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Untitled 4"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/trips/13" for 127.0.0.1 at 2021-09-16 17:54:49 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 64.6ms | Allocations: 2240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 131.4ms | Allocations: 5819)
+Completed 200 OK in 158ms (Views: 139.5ms | ActiveRecord: 2.2ms | Allocations: 7413)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:54:49 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Untitled 4"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/trips/13" for 127.0.0.1 at 2021-09-16 17:54:57 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrip Load (1.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 39.2ms | Allocations: 2238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 122.6ms | Allocations: 6026)
+Completed 200 OK in 147ms (Views: 130.3ms | ActiveRecord: 3.4ms | Allocations: 7614)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:54:58 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Untitled 4"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/trips/13" for 127.0.0.1 at 2021-09-16 17:55:05 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 40.0ms | Allocations: 2238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 119.1ms | Allocations: 5952)
+Completed 200 OK in 142ms (Views: 125.8ms | ActiveRecord: 2.4ms | Allocations: 7540)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:55:05 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Untitled 4"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/trips/13" for 127.0.0.1 at 2021-09-16 17:55:15 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrip Load (1.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:27:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:4
+  Rendered trips/show.erb within layouts/application (Duration: 45.2ms | Allocations: 2239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 122.2ms | Allocations: 6079)
+Completed 200 OK in 164ms (Views: 142.5ms | ActiveRecord: 2.8ms | Allocations: 7673)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3R5TjI0MWQyZzFjV1p0Ylcxc1kyRmpkbUZwWVhFeU1qRnVjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxWdWRHbDBiR1ZrSURRdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRWYm5ScGRHeGxaQ1V5TURRdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0wOS0xNlQyMjo1Nzo0OC4wMzRaIiwicHVyIjoiYmxvYl9rZXkifX0=--56478b4c4a19350f51baabc19e0da42083fb4321/Untitled%204.png" for 127.0.0.1 at 2021-09-16 17:55:16 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Untitled 4"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
