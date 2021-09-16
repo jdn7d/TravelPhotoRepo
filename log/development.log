@@ -2405,3 +2405,75 @@ ActionView::Template::Error (undefined method `location' for nil:NilClass):
     2: <h2> <%= @trip.date %> </h2>
   
 app/views/trips/show.erb:1
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:26:06 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 5.5ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1384)
+Completed 500 Internal Server Error in 10ms (Allocations: 1883)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+  
+app/views/trips/show.erb:1
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:26:07 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 1.6ms | Allocations: 1335)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1405)
+Completed 500 Internal Server Error in 7ms (Allocations: 1758)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+  
+app/views/trips/show.erb:1
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:27:40 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 1.0ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1384)
+Completed 500 Internal Server Error in 4ms (Allocations: 1883)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+  
+app/views/trips/show.erb:1
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:29:10 -0500
+  
+SyntaxError (/mnt/c/Users/donov/Shopify/TravelPhotoRepo/app/controllers/trips_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+...fore_action  :find_trip, only [:show, :destroy]
+...                              ^):
+  
+app/controllers/trips_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+app/controllers/trips_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+app/controllers/trips_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:29:30 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 3187)
+Completed 200 OK in 31ms (Views: 15.3ms | ActiveRecord: 1.7ms | Allocations: 9920)
+
+

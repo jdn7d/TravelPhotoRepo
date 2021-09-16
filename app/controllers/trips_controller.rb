@@ -1,5 +1,7 @@
 class TripsController < ApplicationController
 
+    before_action  :find_trip, only: [:show, :destroy]
+
     def new 
         @trip = Trip.new
     end 
@@ -15,8 +17,12 @@ class TripsController < ApplicationController
 
     private
 
+    def find_trip 
+        @trip = Trip.find(params[:id])
+    end
+
     def trip_params
-       params.require(:trip).permit(:location, :date)
+       params.require(:trip).permit(:location, :date, :user_id)
     end
 
 
