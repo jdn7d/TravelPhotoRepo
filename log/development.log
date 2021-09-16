@@ -1,0 +1,92 @@
+  [1m[35m (14.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210916032236)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210916032236"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-16 03:36:19.145880"], ["updated_at", "2021-09-16 03:36:19.145880"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "z@dev.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "z@dev.com"], ["password_digest", "$2a$12$FPM9jUelHpRNXwCBulhKaeex2bHjf64LwrdpqITHIPB2CNhW4ZCUa"], ["created_at", "2021-09-16 03:38:36.930128"], ["updated_at", "2021-09-16 03:38:36.930128"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2021-09-16 06:53:30 -0500
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 45.7ms | Allocations: 517)
+Completed 200 OK in 195ms (Views: 93.5ms | ActiveRecord: 0.0ms | Allocations: 4323)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-16 06:54:43 -0500
+  
+ArgumentError (must be called with a path and/or options):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2021-09-16 06:54:57 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.0ms | Allocations: 229)
+Completed 200 OK in 12ms (Views: 10.8ms | Allocations: 964)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-09-16 06:55:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 06:55:11 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 14.2ms | Allocations: 1604)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 1675)
+Completed 500 Internal Server Error in 21ms (Allocations: 2676)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/donov/Shopify/TravelPhotoRepo/app/views"
+  * "/home/jss/.rvm/gems/ruby-2.6.1/gems/actiontext-6.1.4.1/app/views"
+  * "/home/jss/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.1.4.1/app/views"
+):
+    1: <h1> Signup </h1>
+    2: 
+    3: <%= render partial: "partials/error_messages", locals: { object: @user } %>
+    4: 
+    5: <%= form_for @user, url:'/signup' do |f| %>
+    6:    <%= f.label :username %>
+  
+app/views/users/new.erb:3
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 06:55:26 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 6.4ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1269)
+Completed 500 Internal Server Error in 12ms (Allocations: 2228)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1> Signup </h1>
+    2: 
+    3: 
+    4: <%= form_for @user, url:'/signup' do |f| %>
+    5:    <%= f.label :username %>
+    6:    <%= f.text_field :username %> <br>
+    7: 
+  
+app/views/users/new.erb:4
