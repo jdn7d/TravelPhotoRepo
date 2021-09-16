@@ -21,7 +21,7 @@ from an image (search for similar images)
 ADD image(s) to the repository
 one / bulk / enormous amount of images
 private or public (permissions)
-secure uploading and stored images
+secure uploading ad stored images
 DELETE image(s)
 one / bulk / selected / all images
 Prevent a user deleting images from another user (access control)
@@ -38,6 +38,20 @@ handle money
 # Description 
 Influenced by my love of travel, this is an app to store and organize your travel photos. A user can upload photos and tag the photo for easy filtering. 
 
+Migrations
+    Photos
+        belongs_to type
+        t.string location
+        t.string month/year
+        t.
 Models 
+    Photo
+    Type 
 Views
+    Sign-up
+    Log-in 
+    Homepage
+    Album 
+    Full size photo
 Controllers 
+    Photos
