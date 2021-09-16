@@ -2282,3 +2282,126 @@ Processing by TripsController#new as HTML
 Completed 200 OK in 147ms (Views: 101.3ms | ActiveRecord: 2.0ms | Allocations: 16583)
 
 
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 11:18:13 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"March 2020", "user_id"=>""}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+  
+NameError (undefined local variable or method `trip_params' for #<TripsController:0x007fffe59db470>
+Did you mean?  trip_path):
+  
+app/controllers/trips_controller.rb:8:in `create'
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 11:18:56 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"March 2020", "user_id"=>""}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 10ms (Allocations: 4208)
+
+
+  
+NameError (undefined local variable or method `trip_params' for #<TripsController:0x007fba3c82ae30>
+Did you mean?  trip_path):
+  
+app/controllers/trips_controller.rb:8:in `create'
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 11:19:08 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"March 2020", "user_id"=>""}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:9:in `create'
+  [1m[36mTrip Create (1.4ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location", "Denver"], ["date", "March 2020"], ["created_at", "2021-09-16 16:19:08.723895"], ["updated_at", "2021-09-16 16:19:08.723895"]]
+  ↳ app/controllers/trips_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/trips/1
+Completed 302 Found in 35ms (ActiveRecord: 12.4ms | Allocations: 10921)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2021-09-16 11:19:08 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 0.4ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3262)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 3876)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2021-09-16 11:22:41 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 7.7ms | Allocations: 1446)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1516)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 2528)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+  
+app/views/trips/show.erb:1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/trips/1" for 127.0.0.1 at 2021-09-16 11:23:01 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 1.4ms | Allocations: 1335)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1405)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1759)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+  
+app/views/trips/show.erb:1
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 11:23:04 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.8ms | Allocations: 872)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 4208)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 11:23:08 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"lkj", "user_id"=>""}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:9:in `create'
+  [1m[36mTrip Create (1.3ms)[0m  [1m[32mINSERT INTO "trips" ("location", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location", "Denver"], ["date", "lkj"], ["created_at", "2021-09-16 16:23:08.080587"], ["updated_at", "2021-09-16 16:23:08.080587"]]
+  ↳ app/controllers/trips_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/trips/2
+Completed 302 Found in 29ms (ActiveRecord: 13.1ms | Allocations: 5481)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:23:08 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 1.0ms | Allocations: 1334)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1404)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1758)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+  
+app/views/trips/show.erb:1

@@ -13,5 +13,11 @@ class TripsController < ApplicationController
         end
     end
 
+    private
+
+    def trip_params
+       params.require(:trip).permit(:location, :date)
+    end
+
 
 end
