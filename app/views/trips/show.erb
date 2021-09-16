@@ -1,2 +1,8 @@
-<h1> <%= @trip.location %> </h1>
-<h2> <%= @trip.date %> </h2>
+<h1> Location: <%= @trip.location %> </h1>
+<h2> Date: <%= @trip.date %> </h2>
+
+<%= form_for @trip do |f| %>
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+
+<% end %>

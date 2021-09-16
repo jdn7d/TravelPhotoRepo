@@ -2477,3 +2477,309 @@ Processing by TripsController#show as HTML
 Completed 200 OK in 31ms (Views: 15.3ms | ActiveRecord: 1.7ms | Allocations: 9920)
 
 
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:31:05 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 13.5ms | Allocations: 3540)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3610)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.4ms | Allocations: 5180)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x007fffe5b3d020>):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= f.file_field :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:31:54 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 1.9ms | Allocations: 3404)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3474)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.4ms | Allocations: 9794)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x007fffe4bf0180>):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= f.file_field :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:31:56 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 2.3ms | Allocations: 3423)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3493)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 4415)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x007fffe4f92400>):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= f.file_field :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:32:43 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 8.9ms | Allocations: 3659)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3729)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms | Allocations: 5299)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x007fffe487b1f8>
+Did you mean?  for
+               fork):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= form.file_field :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:32:45 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 5.9ms | Allocations: 3544)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3614)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 4525)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x007fffe46cdd38>
+Did you mean?  for
+               fork):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= form.file_field :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:34:49 -0500
+  
+SyntaxError (/mnt/c/Users/donov/Shopify/TravelPhotoRepo/app/controllers/trips_controller.rb:25: syntax error, unexpected ')', expecting =>
+...n, :date, photos: [], :user_id)
+...                              ^):
+  
+app/controllers/trips_controller.rb:25: syntax error, unexpected ')', expecting =>
+app/controllers/trips_controller.rb:25: syntax error, unexpected ')', expecting =>
+app/controllers/trips_controller.rb:25: syntax error, unexpected ')', expecting =>
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:35:58 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 3.3ms | Allocations: 3525)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3595)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.1ms | Allocations: 9925)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x007fba3d83b928>
+Did you mean?  for
+               fork):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= form.file_field :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:37:19 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 9.6ms | Allocations: 3628)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 3698)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms | Allocations: 5267)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x007fba34ad6060>):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= f.file_field :photo %>
+    4: 
+    5: <%= form_for @trip do |f| %>
+    6:     <%= f.label :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:37:21 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 2.4ms | Allocations: 3423)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3493)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 4404)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x007fba34f69a50>):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: <%= f.file_field :photo %>
+    4: 
+    5: <%= form_for @trip do |f| %>
+    6:     <%= f.label :photo %>
+  
+app/views/trips/show.erb:3
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:38:00 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 6.3ms | Allocations: 1149)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1219)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 2800)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: 
+    4: <%= form_for @photo do |f| %>
+    5:     <%= f.label :photo %>
+    6:     <%= f.file_field :photo %>
+    7: 
+  
+app/views/trips/show.erb:4
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:38:02 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 0.6ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1030)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 1941)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: 
+    4: <%= form_for @photo do |f| %>
+    5:     <%= f.label :photo %>
+    6:     <%= f.file_field :photo %>
+    7: 
+  
+app/views/trips/show.erb:4
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:39:05 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 9.6ms | Allocations: 3572)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3642)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 5211)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x007fba347654d0>):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: 
+    4:     <%= f.label :photo %>
+    5:     <%= f.file_field :photo %>
+    6: 
+  
+app/views/trips/show.erb:4
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:39:07 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 2.0ms | Allocations: 3423)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3493)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms | Allocations: 4404)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x007fba34f48d78>):
+    1: <h1> <%= @trip.location %> </h1>
+    2: <h2> <%= @trip.date %> </h2>
+    3: 
+    4:     <%= f.label :photo %>
+    5:     <%= f.file_field :photo %>
+    6: 
+  
+app/views/trips/show.erb:4
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:39:14 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 24.4ms | Allocations: 2833)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 6063)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.3ms | Allocations: 7653)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:40:18 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 11.9ms | Allocations: 579)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 3904)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.3ms | Allocations: 5490)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 11:40:29 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 5.8ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3901)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 0.3ms | Allocations: 5487)
+
+
