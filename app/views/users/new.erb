@@ -1,10 +1,17 @@
 <h1> Signup </h1>
 
 
-<%= form_with url: sessions_path do |f| %>
-    <%= f.text_field :email %><br>
-    <%= f.text_field :username %><br>
-    <%= f.password_field :password %><br>
-    <%= link_to "Sign Up", new_user_path %>
-    <%= f.submit "Already have an account? Sign In!" %>
-  <% end %>
+<%= form_for @user, url:'/signup' do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %> <br>
+ 
+    <%= f.label :email %>
+    <%= f.email_field :email %> <br>
+ 
+    <%= f.label :password %>
+    <%= f.password_field :password %> <br>
+ 
+    <%= f.submit "Sumbit" %> <br>
+    <%= link_to "Already have an accout", new_session_path %> <br>
+ 
+ <% end %>

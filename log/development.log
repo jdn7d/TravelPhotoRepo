@@ -262,3 +262,246 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 4891)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:22:48 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 0.9ms | Allocations: 1535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 4506)
+Completed 200 OK in 21ms (Views: 19.8ms | Allocations: 5028)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-09-16 07:22:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Already have an account? Sign In!"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms | Allocations: 2353)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:22:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:22:55 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 1.7ms | Allocations: 1545)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 4508)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 4882)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:23:07 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 1.0ms | Allocations: 1546)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4511)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 4888)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:23:29 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 1.4ms | Allocations: 1545)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 4508)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 4884)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:28:21 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 18.8ms | Allocations: 1753)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 4910)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 5943)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-09-16 07:28:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"jssdnvn@gmail.com", "username"=>"lkj", "password"=>"[FILTERED]", "commit"=>"Create Account!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jssdnvn@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 811)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:28:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:30:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:30:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:31:05 -0500
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 1.0ms | Allocations: 1572)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4544)
+Completed 200 OK in 35ms (Views: 20.8ms | ActiveRecord: 1.6ms | Allocations: 10089)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-09-16 07:31:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>";lkj", "username"=>"kh", "password"=>"[FILTERED]", "commit"=>"Create Account!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ";lkj"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms | Allocations: 984)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:31:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:32:05 -0500
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 7.8ms | Allocations: 1551)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 4523)
+Completed 200 OK in 38ms (Views: 26.1ms | ActiveRecord: 1.6ms | Allocations: 9421)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-09-16 07:32:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>";lk", "username"=>";lk", "password"=>"[FILTERED]", "commit"=>"Create Account!"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ";lk"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms | Allocations: 985)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:32:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:35:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:35:37 -0500
+Processing by UsersController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 0.9ms | Allocations: 1551)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4523)
+Completed 200 OK in 32ms (Views: 19.0ms | ActiveRecord: 2.3ms | Allocations: 9406)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-09-16 07:35:40 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"lk", "username"=>";lk", "password"=>"[FILTERED]", "commit"=>"Create Account!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lk"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms | Allocations: 981)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:35:40 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 4.3ms | Allocations: 1561)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4545)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 4934)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 07:36:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:36:54 -0500
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 12.4ms | Allocations: 1242)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 1312)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.5ms | Allocations: 6777)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1> Signup </h1>
+    2: 
+    3: 
+    4: <%= form_for @designer, url:'/signup' do |f| %>
+    5:     <%= f.label :username %>
+    6:     <%= f.text_field :username %> <br>
+    7:  
+  
+app/views/users/new.erb:4
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:37:10 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 146.4ms | Allocations: 9124)
+  Rendered layout layouts/application.html.erb (Duration: 148.9ms | Allocations: 9194)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms | Allocations: 10306)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_session_path' for #<ActionView::Base:0x007f036d2479e0>
+Did you mean?  new_user_path):
+    12:     <%= f.password_field :password %> <br>
+    13:  
+    14:     <%= f.submit "Sumbit" %> <br>
+    15:     <%= link_to "Already have an accout", new_session_path %> <br>
+    16:  
+    17:  <% end %>
+  
+app/views/users/new.erb:15
+app/views/users/new.erb:4
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:38:02 -0500
+Processing by UsersController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 15.9ms | Allocations: 5353)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 5423)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.0ms | Allocations: 10888)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_session_path' for #<ActionView::Base:0x007f036ce17988>
+Did you mean?  new_user_path):
+    12:     <%= f.password_field :password %> <br>
+    13:  
+    14:     <%= f.submit "Sumbit" %> <br>
+    15:     <%= link_to "Already have an accout", new_session_path %> <br>
+    16:  
+    17:  <% end %>
+  
+app/views/users/new.erb:15
+app/views/users/new.erb:4
