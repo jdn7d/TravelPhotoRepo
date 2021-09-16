@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_09_16_164243) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.string "link"
     t.integer "trip_id", null: false
     t.datetime "created_at", precision: 6, null: false

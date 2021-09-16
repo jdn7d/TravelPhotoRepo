@@ -8,10 +8,15 @@ class PhotosController < ApplicationController
     def create 
         @photo = Photo.new(photo_params)
         if @photo.save 
-            redirect_to photo_path(@photo)
+            redirect_to trip_path(@photo)
         else
             render :new
         end
     end
-    
+
+    private 
+
+    def photo_params
+        params.require(:photo).permit(:category, :file)
+     end
 end
