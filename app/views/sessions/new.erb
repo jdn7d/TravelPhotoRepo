@@ -3,14 +3,14 @@
 <%= form_tag '/signin' do  %>
    <%= label_tag :email %> 
    <%= email_field_tag :email %> <br> 
-
+   
    <%= label_tag :username %> 
-   <%= name_field_tag :username %> <br> 
+   <%= text_field_tag :username %> <br> 
 
    <%= label_tag :password %> 
    <%= password_field_tag :password %> <br>
 
    <%= submit_tag "Sign In" %> <br>
-     <%= link_to "Create an account", new_user_path %> <br>
+   <%= link_to "Create an account", new_user_path %> <br>
 
 <% end %>
