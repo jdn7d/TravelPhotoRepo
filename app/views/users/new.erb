@@ -1,6 +1,5 @@
 <h1> Signup </h1>
 
-
 <%= form_for @user, url:'/signup' do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %> <br>
@@ -11,7 +10,7 @@
     <%= f.label :password %>
     <%= f.password_field :password %> <br>
  
-    <%= f.submit "Sumbit" %> <br>
-    <%= link_to "Already have an accout", new_session_path %> <br>
+    <%= f.submit "Submit" %> <br>
+    <%= link_to "Already have an accout", new_user_path %> <br>
  
  <% end %>

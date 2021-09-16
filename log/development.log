@@ -505,3 +505,148 @@ Did you mean?  new_user_path):
   
 app/views/users/new.erb:15
 app/views/users/new.erb:4
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:40:10 -0500
+Processing by UsersController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 24.6ms | Allocations: 4269)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 4339)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.6ms | Allocations: 9820)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_session_path' for #<ActionView::Base:0x007fffbf0ea738>
+Did you mean?  new_user_path):
+    11:     <%= f.password_field :password %> <br>
+    12:  
+    13:     <%= f.submit "Sumbit" %> <br>
+    14:     <%= link_to "Already have an accout", new_session_path %> <br>
+    15:  
+    16:  <% end %>
+  
+app/views/users/new.erb:14
+app/views/users/new.erb:3
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:40:13 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 15.0ms | Allocations: 3971)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 4041)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 4410)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_session_path' for #<ActionView::Base:0x007fffbf555e30>
+Did you mean?  new_user_path):
+    11:     <%= f.password_field :password %> <br>
+    12:  
+    13:     <%= f.submit "Sumbit" %> <br>
+    14:     <%= link_to "Already have an accout", new_session_path %> <br>
+    15:  
+    16:  <% end %>
+  
+app/views/users/new.erb:14
+app/views/users/new.erb:3
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:40:14 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 20.1ms | Allocations: 3971)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 4041)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 4409)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_session_path' for #<ActionView::Base:0x007fffbecfb988>
+Did you mean?  new_user_path):
+    11:     <%= f.password_field :password %> <br>
+    12:  
+    13:     <%= f.submit "Sumbit" %> <br>
+    14:     <%= link_to "Already have an accout", new_session_path %> <br>
+    15:  
+    16:  <% end %>
+  
+app/views/users/new.erb:14
+app/views/users/new.erb:3
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:41:07 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 28.0ms | Allocations: 4294)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 4364)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 5476)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_session_path' for #<ActionView::Base:0x007fffbeec9620>
+Did you mean?  new_user_path):
+    15:  <% end %>
+    16: 
+    17: 
+    18:  <%= link_to "Already have an accout", new_session_path %> <br>
+    19:  
+  
+app/views/users/new.erb:18
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:41:24 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 13.6ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 4274)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 5408)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 07:41:27 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 2.5ms | Allocations: 746)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3813)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 4205)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-09-16 07:41:42 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"lkj", "email"=>"lkj@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sumbit"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2599)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x007f03808b4068>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/signup" for 127.0.0.1 at 2021-09-16 07:43:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"lkj", "email"=>"lkj@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sumbit"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lkj@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lkj"], ["email", "lkj@gmail.com"], ["password_digest", "$2a$12$Z5xtCemazwUN1qs2eGnHV.aooX4X60VCJ2xHJu31BI3D434fwViKO"], ["created_at", "2021-09-16 12:43:11.015367"], ["updated_at", "2021-09-16 12:43:11.015367"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/users/2
+Completed 302 Found in 224ms (ActiveRecord: 13.3ms | Allocations: 11213)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-16 07:43:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 1.0ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3394)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 5188)
+
+
