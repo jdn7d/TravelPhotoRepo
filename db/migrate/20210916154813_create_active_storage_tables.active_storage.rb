@@ -14,7 +14,7 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
       t.index [ :key ], unique: true
     end
 
-    create_ta ble :active_storage_attachments do |t|
+    create_table :active_storage_attachments do |t|
       t.string     :name,     null: false
       t.references :record,   null: false, polymorphic: true, index: false
       t.references :blob,     null: false
