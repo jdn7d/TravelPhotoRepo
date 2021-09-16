@@ -55,3 +55,14 @@ Views
     Full size photo
 Controllers 
     Photos
+
+
+A user can:
+    *create account 
+    *sign in
+    log out 
+    delete account
+    add trip 
+    delete trip
+    add photo to trip
+    delete photo 

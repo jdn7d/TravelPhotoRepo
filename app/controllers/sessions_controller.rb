@@ -9,5 +9,10 @@ class SessionsController < ApplicationController
         redirect_to '/signin'
       end
     end
+
+    def destroy     
+      session.delete :designer_id
+      redirect_to '/signin' 
+    end  
       
   end

@@ -1395,3 +1395,470 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 3753)
 
 
+Started POST "/signin" for 127.0.0.1 at 2021-09-16 10:15:29 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"j@gmail.com", "username"=>"Jess", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/users/3
+Completed 302 Found in 182ms (ActiveRecord: 1.1ms | Allocations: 1488)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-16 10:15:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 0.5ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3393)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 5076)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-16 10:17:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 40.2ms | Allocations: 3453)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 3523)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.3ms | Allocations: 5166)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x007ffff443c2f8>):
+    1: <h1> <%= @user.username %> </h1>
+    2: 
+    3: <%= link_to "Log out", logout_path, method: "delete" %>
+  
+app/views/users/show.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-16 10:18:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 8.8ms | Allocations: 3317)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3387)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.1ms | Allocations: 9026)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x007f39dc5c62d8>):
+    1: <h1> <%= @user.username %> </h1>
+    2: 
+    3: <%= link_to "Log out", logout_path, method: "delete" %>
+  
+app/views/users/show.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-16 10:18:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 13.1ms | Allocations: 3337)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3407)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.6ms | Allocations: 4305)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x007f39d406ecc0>):
+    1: <h1> <%= @user.username %> </h1>
+    2: 
+    3: <%= link_to "Log out", logout_path, method: "delete" %>
+  
+app/views/users/show.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-16 10:18:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 7.9ms | Allocations: 3337)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3407)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms | Allocations: 4305)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x007f39bc04f658>):
+    1: <h1> <%= @user.username %> </h1>
+    2: 
+    3: <%= link_to "Log out", logout_path, method: "delete" %>
+  
+app/views/users/show.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-16 10:18:35 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 8.6ms | Allocations: 3868)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3943)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.3ms | Allocations: 11997)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x007fffe11e6778>):
+    1: <h1> <%= @user.username %> </h1>
+    2: 
+    3: <%= link_to "Log out", logout_path, method: "delete" %>
+  
+app/views/users/show.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-16 10:19:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 5703)
+Completed 200 OK in 55ms (Views: 39.0ms | ActiveRecord: 1.6ms | Allocations: 11580)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-09-16 10:19:38 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:14:in `destroy'
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/sessions_controller.rb:14:in `destroy'
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:14:in `destroy'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 24ms (ActiveRecord: 11.1ms | Allocations: 5132)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 10:19:39 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 1.1ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3681)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 4554)
+
+
+Started GET "/signin/3" for 127.0.0.1 at 2021-09-16 10:19:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin/3"):
+  
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 10:19:48 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 0.8ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3379)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 3756)
+
+
+Started POST "/signin" for 127.0.0.1 at 2021-09-16 10:19:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"jssdnvn@gmail.com", "username"=>"Jess", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jssdnvn@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 978)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 10:19:53 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 0.6ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3378)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 3753)
+
+
+Started POST "/signin" for 127.0.0.1 at 2021-09-16 10:20:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"j@gmail.com", "username"=>"Jess", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 801)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 10:20:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 0.5ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 3377)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 3752)
+
+
+Started POST "/signin" for 127.0.0.1 at 2021-09-16 10:20:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"j@gmail.com", "username"=>"Jess", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 801)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 10:20:08 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 0.7ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3378)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 3753)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 10:20:47 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 32.0ms | Allocations: 4887)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 7945)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms | Allocations: 8492)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-09-16 10:20:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jssdnvn@gmail.com", "username"=>"Jess", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jssdnvn@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (6.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Jess"], ["email", "jssdnvn@gmail.com"], ["password_digest", "$2a$12$kJXxN3xKOIboLqQQCGP0yevTZMIITTkkz2Mw0ajLAcOE.LC7JmfJ2"], ["created_at", "2021-09-16 15:20:51.835069"], ["updated_at", "2021-09-16 15:20:51.835069"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/users/4
+Completed 302 Found in 198ms (ActiveRecord: 12.7ms | Allocations: 6368)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:20:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 0.2ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3146)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 4067)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started DELETE "/logout" for 127.0.0.1 at 2021-09-16 10:21:02 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 664)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/sessions_controller.rb:14:in `destroy'
+Started GET "/users/new" for 127.0.0.1 at 2021-09-16 10:21:35 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 1.5ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 3819)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 4209)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:21:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 0.5ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 3188)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 4106)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-09-16 10:21:41 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 655)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/sessions_controller.rb:14:in `destroy'
+Started DELETE "/logout" for 127.0.0.1 at 2021-09-16 10:22:11 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:14:in `destroy'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.1ms | Allocations: 1841)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/sessions_controller.rb:14:in `destroy'
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:22:31 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 1.5ms | Allocations: 329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 5945)
+Completed 200 OK in 74ms (Views: 45.9ms | ActiveRecord: 1.2ms | Allocations: 14020)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-09-16 10:22:35 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 631)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/sessions_controller.rb:14:in `destroy'
+Started DELETE "/logout" for 127.0.0.1 at 2021-09-16 10:25:11 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 2ms (Allocations: 342)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 10:25:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 0.9ms | Allocations: 635)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3813)
+Completed 200 OK in 21ms (Views: 19.4ms | Allocations: 4735)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:25:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3170)
+Completed 200 OK in 36ms (Views: 20.9ms | ActiveRecord: 1.7ms | Allocations: 8951)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:31:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms | Allocations: 7070)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x007ffff853f390>):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:32:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.6ms | Allocations: 7496)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x007ffff8d5e3f0>):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:32:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 3017)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x007f12c87341c8>):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:33:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms | Allocations: 3017)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x007f12d131f868>):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:33:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms | Allocations: 3017)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x007ffff87643a0>):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2021-09-16 10:34:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.4ms | Allocations: 7383)
+
+
+  
+NoMethodError (undefined method `logged_in?' for #<UsersController:0x007f12d12ec620>
+Did you mean?  logger):
+  
+app/controllers/users_controller.rb:19:in `show'
