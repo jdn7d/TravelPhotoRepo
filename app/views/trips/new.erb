@@ -7,8 +7,11 @@
     <%= f.label :date %>
     <%= f.text_field :date %> <br>
  
+    <%= f.label :photo %>
+    <%= f.file_field :photo %> <br>
+
     <%= f.hidden_field :user_id, :value => session[:user_id] %>
 
-    <%= f.submit "Submit" %> <br>
+    <%= f.submit "Submit" %>
 
 <% end %>
