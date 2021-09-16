@@ -9,11 +9,13 @@ class TripsController < ApplicationController
     def create 
         @trip = Trip.new(trip_params)
         if @trip.save 
-            redirect_to trip_path(@trip)
+            redirect_to @user
         else
             render :new
         end
     end
+
+
 
     private
 

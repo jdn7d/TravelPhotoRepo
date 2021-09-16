@@ -3531,3 +3531,380 @@ Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.3ms | Allocations: 
 ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: trips.user_id):
   
 app/controllers/trips_controller.rb:11:in `create'
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 12:06:26 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 7ms (Allocations: 1242)
+
+
+  
+SyntaxError (/mnt/c/Users/donov/Shopify/TravelPhotoRepo/app/models/trip.rb:7: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...  has_many :photos, dependent :destroy
+...                              ^):
+  
+app/models/trip.rb:7: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/trip.rb:7: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/trip.rb:7: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/trips_controller.rb:21:in `find_trip'
+Started GET "/trips/2" for 127.0.0.1 at 2021-09-16 12:06:49 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+Completed 404 Not Found in 32ms (ActiveRecord: 1.3ms | Allocations: 4328)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Trip with 'id'=2):
+  
+app/controllers/trips_controller.rb:21:in `find_trip'
+Started GET "/user/1" for 127.0.0.1 at 2021-09-16 12:07:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+Started GET "/users/1" for 127.0.0.1 at 2021-09-16 12:07:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1177)
+
+
+  
+SyntaxError (/mnt/c/Users/donov/Shopify/TravelPhotoRepo/app/models/user.rb:5: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+    has_many :photos, through :trips
+                              ^):
+  
+app/models/user.rb:5: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/user.rb:5: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/user.rb:5: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/users_controller.rb:17:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2021-09-16 12:07:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 0.8ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3319)
+Completed 200 OK in 50ms (Views: 18.1ms | ActiveRecord: 2.3ms | Allocations: 10489)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:07:47 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.3ms | Allocations: 652)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 3803)
+Completed 200 OK in 31ms (Views: 19.6ms | ActiveRecord: 1.7ms | Allocations: 8960)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:07:48 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.4ms | Allocations: 588)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 4018)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms | Allocations: 4411)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:07:53 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"Aug", "user_id"=>""}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.6ms | Allocations: 598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3671)
+Completed 200 OK in 67ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 7097)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2021-09-16 12:07:57 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:21:in `find_trip'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1240)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Trip with 'id'=1):
+  
+app/controllers/trips_controller.rb:21:in `find_trip'
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:08:03 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.0ms | Allocations: 588)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 3755)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 4148)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:08:09 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"LA", "date"=>"Aug", "user_id"=>""}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.1ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3668)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 4688)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:11:46 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 0.4ms | Allocations: 104)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3228)
+Completed 200 OK in 19ms (Views: 17.9ms | Allocations: 5167)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:11:50 -0500
+Processing by TripsController#new as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.0ms | Allocations: 651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3797)
+Completed 200 OK in 38ms (Views: 21.5ms | ActiveRecord: 3.6ms | Allocations: 9749)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:11:54 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"Aug", "user_id"=>""}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.1ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 3670)
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 6651)
+
+
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:15:59 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 1.8ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4404)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms | Allocations: 5440)
+
+
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:16:05 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 0.9ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3429)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 4461)
+
+
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:16:09 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3175)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 3554)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:16:12 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 6.0ms | Allocations: 770)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 3929)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 4449)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:16:13 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.5ms | Allocations: 558)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 3703)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 4098)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:16:16 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"Aug"}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.3ms | Allocations: 565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3638)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 4655)
+
+
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:16:37 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 6.9ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 3441)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 4478)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:16:41 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 4.1ms | Allocations: 770)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3915)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 4436)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:16:46 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"Aug"}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.3ms | Allocations: 565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3638)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 4656)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:16:49 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"Aug"}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.3ms | Allocations: 565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3640)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 4654)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:16:49 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"Aug"}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.1ms | Allocations: 565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 3640)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 4654)
+
+
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:17:42 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 0.3ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3440)
+Completed 200 OK in 18ms (Views: 16.6ms | Allocations: 4532)
+
+
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:17:43 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3176)
+Completed 200 OK in 17ms (Views: 16.6ms | Allocations: 3556)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:17:46 -0500
+Processing by TripsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 9.9ms | Allocations: 878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 4045)
+Completed 200 OK in 43ms (Views: 29.3ms | ActiveRecord: 1.4ms | Allocations: 10123)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:17:50 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"Aug", "user_id"=>""}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.1ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 3670)
+Completed 200 OK in 28ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 6652)
+
+
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/trips" for 127.0.0.1 at 2021-09-16 12:18:03 -0500
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.erb within layouts/application
+  Rendered trips/index.erb within layouts/application (Duration: 1.2ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 3439)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 4476)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2021-09-16 12:18:06 -0500
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 5.8ms | Allocations: 770)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 3926)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 4446)
+
+
+Started POST "/trips" for 127.0.0.1 at 2021-09-16 12:18:09 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"location"=>"Denver", "date"=>"AUg"}, "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.7ms | Allocations: 565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 3642)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 4657)
+
+
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/login" for 127.0.0.1 at 2021-09-16 12:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 12:20:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 1.3ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 3881)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 4917)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-16 12:21:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 1.2ms | Allocations: 323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 3459)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 3835)
+
+
