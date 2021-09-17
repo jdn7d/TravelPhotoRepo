@@ -14,4 +14,4 @@ Trip.create(location: 'LA', date: 'Aug 2020', user: User.first)
 
 Trip.create(location: 'New York', date: 'May 2018', user: User.last)
 
-Photo.create(category: landscape, trip_id)
+Photo.create(category: 'landscape', trip_id: 1)
