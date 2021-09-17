@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_09_16_164243) do
   create_table "trips", force: :cascade do |t|
     t.string "location"
     t.string "date"
+    t.boolean "private", default: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

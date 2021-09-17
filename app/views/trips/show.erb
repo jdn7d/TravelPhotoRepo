@@ -2,6 +2,8 @@
 <h2> Date Visited: <%= @trip.date %> </h2>
 
 <%= image_tag @trip.cover_photo, :style => "max-height:300px"%>
+
+<%= link_to 'Remove image', @trip.cover_photo.purge %>
 <h2> More Photos </h2>
 
 
