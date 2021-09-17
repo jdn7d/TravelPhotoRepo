@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :trips
+  resources :trips do 
+    resources :photos
+  end
+  
   resources :photos
   resources :sessions
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
