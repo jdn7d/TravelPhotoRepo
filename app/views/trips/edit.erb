@@ -1,0 +1,6 @@
+  
+<h1> Edit <%= @trip.location %> </h1>
+
+<%= button_to "Delete trip",  trip_path(@trip), method: :delete %> <br>
+
+<%= link_to "Cancel", trip_path(@trip) %>

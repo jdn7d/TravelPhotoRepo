@@ -1,13 +1,15 @@
-<h1> Add a new photo </h1>
+<h1> Add a new photo to <%= @trip.location %> Trip</h1>
 
-<%= form_for @photo do |f| %>
+<%= form_for ([@trip, @photo]) do |f| %>
     <%= f.label :category %>
     <%= f.text_field :category %> <br>
 
     <%= f.label :file %>
     <%= f.file_field :file %> <br>
     
-    <%= f.hidden_field :trip_id,  :value => @trip.id %>
+    <% if @trip %>
+        <%= f.hidden_field :trip_id,  :value => @trip.id %>
+    <% end %>
 
     <%= f.submit "Submit" %>
 
