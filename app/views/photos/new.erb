@@ -7,9 +7,9 @@
     <%= f.label :file %>
     <%= f.file_field :file %> <br>
     
-    <% if @trip %>
-        <%= f.hidden_field :trip_id,  :value => @trip.id %>
-    <% end %>
+
+<%= f.hidden_field :trip_id, :value => @trip.id %>
+
 
     <%= f.submit "Submit" %>
 

@@ -1,8 +1,16 @@
 <h1> Location: <%= @trip.location %> </h1>
 <h2> Date Visited: <%= @trip.date %> </h2>
 
+
+<%= image_tag @trip.cover_photo, :style => "max-height:300px"%>
+
+
 <h2> More Photos </h2>
 
-<%= link_to "Edit Trip", edit_trip_path(@trip) %> <br>
-<%= link_to "Add a photo", new_trip_photo_path(@trip) %> <br>
 
+ <%= link_to "Add a photo", new_photo_path(@trip) %> <br>
+
+ <%= link_to "Public Profile", trips_path(@user) %> <br>
+
+
+ 

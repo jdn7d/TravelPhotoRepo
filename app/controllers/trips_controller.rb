@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
 
-    before_action  :find_trip, only: [:show, :destroy]
+    before_action  :find_trip, only: [:show, :edit, :destroy]
 
     def index 
         @trips = current_user.trips
@@ -17,6 +17,10 @@ class TripsController < ApplicationController
         else
             render :new
         end
+    end
+
+    def edit 
+
     end
 
     def update 
