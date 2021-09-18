@@ -19,6 +19,12 @@ class TripsController < ApplicationController
         end
     end
 
+    def show
+        @user = User.find_by_id(params[:user_id] )
+  
+    end
+
+
     def edit 
 
     end
