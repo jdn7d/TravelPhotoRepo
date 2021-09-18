@@ -14113,3 +14113,1116 @@ Processing by TripsController#new as HTML
 Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 4329)
 
 
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:12:27 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 8.0ms | Allocations: 1215)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 1285)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.3ms | Allocations: 8604)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a new trip </h1>
+    2: 
+    3: <%= form_for ([@trip, @user]) do |f| %>
+    4:     <%= f.label :location %>
+    5:     <%= f.text_field :location %> <br>
+    6: 
+  
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:12:54 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 22.5ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 1305)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 2423)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a new trip </h1>
+    2: 
+    3: <%= form_for ([@trip, @user]) do |f| %>
+    4:     <%= f.label :location %>
+    5:     <%= f.text_field :location %> <br>
+    6: 
+  
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:12:55 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 0.5ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1040)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 1414)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a new trip </h1>
+    2: 
+    3: <%= form_for ([@trip, @user]) do |f| %>
+    4:     <%= f.label :location %>
+    5:     <%= f.text_field :location %> <br>
+    6: 
+  
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:13:13 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 13.1ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 1305)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 2423)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a new trip </h1>
+    2: 
+    3: <%= form_for ([@trip, @user]) do |f| %>
+    4:     <%= f.label :location %>
+    5:     <%= f.text_field :location %> <br>
+    6: 
+  
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:13:15 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 0.4ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1040)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1414)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a new trip </h1>
+    2: 
+    3: <%= form_for ([@trip, @user]) do |f| %>
+    4:     <%= f.label :location %>
+    5:     <%= f.text_field :location %> <br>
+    6: 
+  
+app/views/trips/new.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:13:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 4.9ms | Allocations: 2556)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 5798)
+Completed 200 OK in 39ms (Views: 24.5ms | ActiveRecord: 1.4ms | Allocations: 12481)
+
+
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:13:20 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:45:in `find_trip'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  Rendered trips/show.erb within layouts/application (Duration: 10.0ms | Allocations: 4175)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4245)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.2ms | Allocations: 6168)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+    15: 
+    16:  <%= link_to "Add a photo", new_photo_path(@trip) %> <br>
+    17: 
+    18:  <%= link_to "Public Profile", user_path(@user) %> <br>
+    19: 
+    20: 
+    21:  
+  
+app/views/trips/show.erb:18
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:13:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 3.0ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4171)
+Completed 200 OK in 30ms (Views: 21.0ms | ActiveRecord: 1.0ms | Allocations: 5629)
+
+
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:14:03 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 0.7ms | Allocations: 970)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1054)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1520)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a new trip </h1>
+    2: 
+    3: <%= form_for ([@trip, @user]) do |f| %>
+    4:     <%= f.label :location %>
+    5:     <%= f.text_field :location %> <br>
+    6: 
+  
+app/views/trips/new.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:14:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 5.3ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 4162)
+Completed 200 OK in 41ms (Views: 24.1ms | ActiveRecord: 1.4ms | Allocations: 5718)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:14:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 3.9ms | Allocations: 1234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 4568)
+Completed 200 OK in 34ms (Views: 23.7ms | ActiveRecord: 1.0ms | Allocations: 6771)
+
+
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:14:47 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 30.4ms | Allocations: 4528)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 4598)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 5594)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:14:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 4.4ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 4171)
+Completed 200 OK in 32ms (Views: 20.3ms | ActiveRecord: 1.1ms | Allocations: 5725)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:15:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 6.0ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 4159)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 0.9ms | Allocations: 5617)
+
+
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:16:03 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.7ms | Allocations: 2018)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2171)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2559)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:16:17 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.7ms | Allocations: 2290)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2360)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3478)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/new" for 127.0.0.1 at 2021-09-18 16:16:21 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 2.0ms | Allocations: 1064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 4404)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 5315)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:16:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 5.4ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4412)
+Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 0.9ms | Allocations: 5997)
+
+
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:16:27 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:45:in `find_trip'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  Rendered trips/show.erb within layouts/application (Duration: 5.6ms | Allocations: 2265)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2335)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms | Allocations: 4085)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+    15: 
+    16:  <%= link_to "Add a photo", new_photo_path(@trip) %> <br>
+    17: 
+    18:  <%= link_to "Public Profile", user_path(@user) %> <br>
+    19: 
+    20: 
+    21:  
+  
+app/views/trips/show.erb:18
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:16:39 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:45:in `find_trip'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  Rendered trips/show.erb within layouts/application (Duration: 14.0ms | Allocations: 1253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 4592)
+Completed 200 OK in 41ms (Views: 31.9ms | ActiveRecord: 1.0ms | Allocations: 6979)
+
+
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:16:49 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:45:in `find_trip'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  Rendered trips/show.erb within layouts/application (Duration: 17.0ms | Allocations: 3269)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 3339)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.1ms | Allocations: 5710)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+    2: <h2> Date Visited: <%= @trip.date %> </h2>
+    3: 
+    4: 
+    5:     <%= image_tag @trip.cover_photo %>
+    6: 
+    7: 
+    8: <h2> More Photos </h2>
+  
+app/views/trips/show.erb:5
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:16:59 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:45:in `find_trip'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  Rendered trips/show.erb within layouts/application (Duration: 19.9ms | Allocations: 3268)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3338)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.1ms | Allocations: 5708)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+    2: <h2> Date Visited: <%= @trip.date %> </h2>
+    3: 
+    4: 
+    5: <%= image_tag @trip.cover_photo %>
+    6: 
+    7: 
+    8: <h2> More Photos </h2>
+  
+app/views/trips/show.erb:5
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:17:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 4.0ms | Allocations: 1259)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4596)
+Completed 200 OK in 29ms (Views: 20.0ms | ActiveRecord: 1.0ms | Allocations: 6579)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:18:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 17.7ms | Allocations: 1236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 4570)
+Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 1.0ms | Allocations: 6769)
+
+
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:18:27 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 4.1ms | Allocations: 2293)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2444)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 3376)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:19:07 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.6ms | Allocations: 2059)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2129)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms | Allocations: 8883)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/new" for 127.0.0.1 at 2021-09-18 16:19:10 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 2.2ms | Allocations: 1066)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4218)
+Completed 200 OK in 29ms (Views: 19.1ms | ActiveRecord: 1.1ms | Allocations: 9409)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:19:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 3.8ms | Allocations: 2372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 5420)
+Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 1.2ms | Allocations: 7019)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:19:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 5.8ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 4160)
+Completed 200 OK in 39ms (Views: 31.6ms | ActiveRecord: 1.3ms | Allocations: 5619)
+
+
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:19:18 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.2ms | Allocations: 2024)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2096)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2562)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:21:43 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.4ms | Allocations: 2059)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2129)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.3ms | Allocations: 8845)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/new" for 127.0.0.1 at 2021-09-18 16:21:48 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 1.8ms | Allocations: 804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 3964)
+Completed 200 OK in 38ms (Views: 26.6ms | ActiveRecord: 2.0ms | Allocations: 9034)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-18 16:21:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Redirected to http://127.0.0.1:3000/signin
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms | Allocations: 1448)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-18 16:21:51 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 1.0ms | Allocations: 584)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3684)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 4555)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:21:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 8.4ms | Allocations: 2376)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 5427)
+Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 1.3ms | Allocations: 6886)
+
+
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:21:59 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.3ms | Allocations: 2026)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2177)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:24:13 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/trips_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 1.5ms | Allocations: 2059)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2129)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.7ms | Allocations: 8864)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/signin" for 127.0.0.1 at 2021-09-18 16:24:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 1.2ms | Allocations: 326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 3426)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 3944)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:24:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 4.3ms | Allocations: 2377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 5428)
+Completed 200 OK in 39ms (Views: 23.2ms | ActiveRecord: 2.0ms | Allocations: 11704)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:25:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 17.4ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 4573)
+Completed 200 OK in 47ms (Views: 36.9ms | ActiveRecord: 1.2ms | Allocations: 6776)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:25:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 3.6ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4167)
+Completed 200 OK in 29ms (Views: 19.2ms | ActiveRecord: 1.1ms | Allocations: 5626)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:25:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 4.9ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 4159)
+Completed 200 OK in 32ms (Views: 23.9ms | ActiveRecord: 1.2ms | Allocations: 5617)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:26:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 20.5ms | Allocations: 1241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 4579)
+Completed 200 OK in 57ms (Views: 42.9ms | ActiveRecord: 1.6ms | Allocations: 6783)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:26:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 19.0ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 4574)
+Completed 200 OK in 50ms (Views: 42.1ms | ActiveRecord: 0.7ms | Allocations: 6772)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:26:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 16.4ms | Allocations: 1243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 4577)
+Completed 200 OK in 45ms (Views: 36.0ms | ActiveRecord: 1.0ms | Allocations: 6775)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:29:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 10.5ms | Allocations: 7505)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 10558)
+Completed 200 OK in 44ms (Views: 26.1ms | ActiveRecord: 2.8ms | Allocations: 17776)
+
+
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:29:22 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:46:in `find_trip'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  Rendered trips/show.erb within layouts/application (Duration: 14.1ms | Allocations: 5190)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5260)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.9ms | Allocations: 7642)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+    2: <h2> Date Visited: <%= @trip.date %> </h2>
+    3: 
+    4: 
+    5: <%= image_tag @trip.cover_photo %>
+    6: 
+    7: 
+    8: <h2> More Photos </h2>
+  
+app/views/trips/show.erb:5
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:29:44 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:46:in `find_trip'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 8.0ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 3571)
+Completed 200 OK in 35ms (Views: 23.9ms | ActiveRecord: 0.9ms | Allocations: 5957)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:29:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 4.6ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 4387)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 0.8ms | Allocations: 6371)
+
+
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:30:06 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:46:in `find_trip'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 0.7ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 3679)
+Completed 200 OK in 63ms (Views: 51.8ms | ActiveRecord: 0.7ms | Allocations: 6061)
+
+
+Started GET "/trips/3.19" for 127.0.0.1 at 2021-09-18 16:30:10 -0500
+Processing by TripsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:46:in `find_trip'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 0.2ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3247)
+Completed 200 OK in 27ms (Views: 19.4ms | ActiveRecord: 0.7ms | Allocations: 4850)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:30:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 16.3ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 4341)
+Completed 200 OK in 43ms (Views: 34.6ms | ActiveRecord: 0.8ms | Allocations: 6325)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:30:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 3.0ms | Allocations: 966)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 4127)
+Completed 200 OK in 31ms (Views: 22.2ms | ActiveRecord: 1.0ms | Allocations: 5586)
+
+
+Started GET "/users/3/trips/19" for 127.0.0.1 at 2021-09-18 16:30:17 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"19"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:46:in `find_trip'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 0.4ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3249)
+Completed 200 OK in 29ms (Views: 15.7ms | ActiveRecord: 0.6ms | Allocations: 5013)
+
+
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:30:30 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.9ms | Allocations: 2341)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2413)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3008)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:31:00 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 2.1ms | Allocations: 2018)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2088)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2462)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:31:33 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 79.4ms | Allocations: 10323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 151.0ms | Allocations: 16330)
+Completed 200 OK in 266ms (Views: 172.7ms | ActiveRecord: 2.9ms | Allocations: 26401)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 16:31:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:8
+  Rendered users/show.erb within layouts/application (Duration: 4.5ms | Allocations: 1402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 211.9ms | Allocations: 10271)
+Completed 200 OK in 223ms (Views: 213.1ms | ActiveRecord: 1.2ms | Allocations: 11745)
+
+
+Started GET "/users/3/trips/19" for 127.0.0.1 at 2021-09-18 16:31:37 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"19"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:46:in `find_trip'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  Rendered trips/show.erb within layouts/application (Duration: 0.6ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3393)
+Completed 200 OK in 31ms (Views: 17.9ms | ActiveRecord: 1.0ms | Allocations: 5817)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+Started GET "/users/3/trips/new" for 127.0.0.1 at 2021-09-18 16:32:39 -0500
+Processing by TripsController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.erb within layouts/application
+  Rendered trips/new.erb within layouts/application (Duration: 59.3ms | Allocations: 6654)
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 6727)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms | Allocations: 7334)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    10:     <%= f.label :cover_photo %>
+    11:     <%= f.file_field :cover_photo %> <br>
+    12: 
+    13:     <%= f.hidden_field :user_id, :value => @user.id %>
+    14: 
+    15:     <%= f.submit "Submit" %>
+    16: 
+  
+app/views/trips/new.erb:13
+app/views/trips/new.erb:3

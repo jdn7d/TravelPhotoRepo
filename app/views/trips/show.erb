@@ -2,20 +2,12 @@
 <h2> Date Visited: <%= @trip.date %> </h2>
 
 
-<% if @trip.cover_photo.attached? %>
-
-    <strong>Image:</strong>
-    <br>
-    <%= image_tag @trip.cover_photo %>
-
-<% end %>
 
 <h2> More Photos </h2>
 
 
- <%= link_to "Add a photo", new_photo_path(@trip) %> <br>
+<%= link_to "Add a photo", new_photo_path(@trip) %> <br>
 
- <%= link_to "Public Profile", user_path(@user) %> <br>
 
 
  

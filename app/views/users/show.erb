@@ -6,8 +6,12 @@
 <h2> Saved Trips </h2>
 <h3> Click on a trip for more information and photos </h3>
 <% @user.trips.each do |trip| %>
-    <li><%= link_to trip.location, trip_path(@user, trip) %></li>
+    <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
  <% end %> <br>
+
+<script>
+ console.log(current_user);
+</script>
 
 
 <%= link_to "Add a trip", new_user_trip_path(@user) %> <br>

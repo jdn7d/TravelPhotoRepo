@@ -1,6 +1,6 @@
 <h1>Add a new trip </h1>
 
-<%= form_for @trip do |f| %>
+<%= form_for ([@trip]) do |f| %>
     <%= f.label :location %>
     <%= f.text_field :location %> <br>
 
@@ -10,7 +10,7 @@
     <%= f.label :cover_photo %>
     <%= f.file_field :cover_photo %> <br>
 
-    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+    <%= f.hidden_field :user_id, :value => @user.id %>
 
     <%= f.submit "Submit" %>
 
