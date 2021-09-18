@@ -7,6 +7,7 @@ class TripsController < ApplicationController
     end
 
     def new 
+        @user = User.find_by_id(params[:user_id] )
         @trip = Trip.new
     end 
 
@@ -14,7 +15,7 @@ class TripsController < ApplicationController
         @user = User.find_by_id(params[:user_id] )
         @trip = Trip.new(trip_params)
         if @trip.save 
-            redirect_to user_trip_path(@trip)
+            redirect_to trip_path(@trip)
         else
             render :new
         end
@@ -47,7 +48,7 @@ class TripsController < ApplicationController
     end
 
     def trip_params
-       params.require(:trip).permit(:location, :date, :user_id, :cover_photo).merge(created_by: current_user.id)
+       params.require(:trip).permit(:location, :date, :user_id, :cover_photo)
 
     end
 
