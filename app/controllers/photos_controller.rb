@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
         @trip = Trip.find_by_id(params[:trip_id] )
         @photo = Photo.new(photo_params)
         if @photo.save 
-            redirect_to trip_path
+            redirect_to trip_path(@trip)
         else
             render :new
         end
@@ -31,6 +31,6 @@ class PhotosController < ApplicationController
     end
 
     def photo_params
-        params.require(:photo).permit(:category, :file)
+        params.require(:photo).permit(:category, :file, :trip_id)
      end
 end

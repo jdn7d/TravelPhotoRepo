@@ -15,7 +15,7 @@ class UsersController < ApplicationController
      end
      
      def show
-   
+         
          @user = User.find(params[:id] )
          if @user == current_user
          else
