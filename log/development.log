@@ -29993,3 +29993,148 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 77ms (Views: 69.0ms | ActiveRecord: 2.6ms | Allocations: 5687)
 
 
+Started GET "/users/2" for 127.0.0.1 at 2021-09-19 11:17:04 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:14
+  Rendered users/show.erb within layouts/application (Duration: 36.3ms | Allocations: 12111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.7ms | Allocations: 313)
+  Rendered layout layouts/application.html.erb (Duration: 204.1ms | Allocations: 20309)
+Completed 200 OK in 257ms (Views: 207.9ms | ActiveRecord: 2.5ms | Allocations: 30197)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-19 11:17:07 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 33.0ms | Allocations: 234)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 1000)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-19 11:17:21 -0500
+  
+ArgumentError ('/signin' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2021-09-19 11:17:35 -0500
+  
+ActionController::RoutingError (uninitialized constant SessionController
+Did you mean?  SessionsController):
+  
+Started GET "/" for 127.0.0.1 at 2021-09-19 11:17:44 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 6.5ms | Allocations: 639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.7ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 7181)
+Completed 500 Internal Server Error in 28ms (Allocations: 8264)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+    3:   <div class="container">
+    4:   
+    5:     <ul class="nav navbar-nav">
+    6:       <%= link_to "Home", user_path(@user) %>
+    7:       <%= link_to "Photos", photos_path(@user) %>
+    8:       <%= link_to "Log out", logout_path, method: "delete" %>
+    9: 
+  
+app/views/layouts/_navbar.erb:6
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2021-09-19 11:18:00 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 1.2ms | Allocations: 582)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 15.5ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 4375)
+Completed 200 OK in 37ms (Views: 36.2ms | Allocations: 5419)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-19 11:19:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:14
+  Rendered users/show.erb within layouts/application (Duration: 19.1ms | Allocations: 8626)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.3ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 11852)
+Completed 200 OK in 57ms (Views: 37.7ms | ActiveRecord: 4.8ms | Allocations: 19213)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-19 11:19:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 0.5ms | Allocations: 326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 2.0ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 3597)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 4115)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-19 11:26:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:14
+  Rendered users/show.erb within layouts/application (Duration: 14.0ms | Allocations: 1976)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 5.2ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 5655)
+Completed 200 OK in 70ms (Views: 57.7ms | ActiveRecord: 2.2ms | Allocations: 7939)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-19 11:26:21 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 1.4ms | Allocations: 582)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 3817)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 4691)
+
+
+Started GET "/signin" for 127.0.0.1 at 2021-09-19 11:26:22 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 0.6ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 3732)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 4108)
+
+
