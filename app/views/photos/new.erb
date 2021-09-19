@@ -2,7 +2,7 @@
 
 <%= form_for ([@trip, @photo]) do |f| %>
     <%= f.label :category %>
-    <%= f.text_field :category %> <br>
+    <%= f.select :category, ["Landscape", "Portrait", "Food"]  %> <br>
 
     <%= f.label :file %>
     <%= f.file_field :file %> <br>

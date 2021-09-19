@@ -28747,3 +28747,365 @@ Processing by ActiveStorage::DiskController#show as */*
 Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 295)
 
 
+Started GET "/photos" for 127.0.0.1 at 2021-09-19 09:41:59 -0500
+Processing by PhotosController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/index.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" INNER JOIN "trips" ON "photos"."trip_id" = "trips"."id" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/photos/index.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Photo"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  Rendered photos/index.erb within layouts/application (Duration: 123.1ms | Allocations: 21128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 1.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 191.5ms | Allocations: 24935)
+Completed 200 OK in 255ms (Views: 187.0ms | ActiveRecord: 17.2ms | Allocations: 35576)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiblZuZG1wME5HOTVhSFU0TVRNMk1YVjFhVEo2WjJwblltYzBkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKbWJIbGZabWx6YUY5aWRXWm1ZV3h2WDNKcGRtVnlYM1Z1ZEdsMGJHVmtYekF5TkROZk1DNXFabWxtSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkbWJIbGZabWx6YUY5aWRXWm1ZV3h2WDNKcGRtVnlYM1Z1ZEdsMGJHVmtYekF5TkROZk1DNXFabWxtQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NDQ6MjkuNDE3WiIsInB1ciI6ImJsb2Jfa2V5In19--0fe30de87bee61038b78b7d48773683b3f8c6f1a/fly_fish_buffalo_river_untitled_0243_0.jfif" for 127.0.0.1 at 2021-09-19 09:42:00 -0500
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fly_fish_buffalo_river_untitled_0243_0"}
+Completed 200 OK in 11ms (ActiveRecord: 0.0ms | Allocations: 408)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-09-19 09:43:31 -0500
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/index.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" INNER JOIN "trips" ON "photos"."trip_id" = "trips"."id" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/photos/index.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Photo"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  Rendered photos/index.erb within layouts/application (Duration: 24.2ms | Allocations: 3225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 1.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 90.8ms | Allocations: 7050)
+Completed 200 OK in 104ms (Views: 94.3ms | ActiveRecord: 2.0ms | Allocations: 8766)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiblZuZG1wME5HOTVhSFU0TVRNMk1YVjFhVEo2WjJwblltYzBkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKbWJIbGZabWx6YUY5aWRXWm1ZV3h2WDNKcGRtVnlYM1Z1ZEdsMGJHVmtYekF5TkROZk1DNXFabWxtSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkbWJIbGZabWx6YUY5aWRXWm1ZV3h2WDNKcGRtVnlYM1Z1ZEdsMGJHVmtYekF5TkROZk1DNXFabWxtQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NDQ6MjkuNDE3WiIsInB1ciI6ImJsb2Jfa2V5In19--0fe30de87bee61038b78b7d48773683b3f8c6f1a/fly_fish_buffalo_river_untitled_0243_0.jfif" for 127.0.0.1 at 2021-09-19 09:43:31 -0500
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fly_fish_buffalo_river_untitled_0243_0"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-09-19 09:43:33 -0500
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/index.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" INNER JOIN "trips" ON "photos"."trip_id" = "trips"."id" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/photos/index.erb:5
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Photo"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  Rendered photos/index.erb within layouts/application (Duration: 30.0ms | Allocations: 3060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.8ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | Allocations: 6393)
+Completed 200 OK in 95ms (Views: 81.1ms | ActiveRecord: 4.5ms | Allocations: 7370)
+
+
+Started GET "/users/2/photos" for 127.0.0.1 at 2021-09-19 09:43:34 -0500
+Processing by PhotosController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/index.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" INNER JOIN "trips" ON "photos"."trip_id" = "trips"."id" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/photos/index.erb:5
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Photo"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/photos/index.erb:6
+  Rendered photos/index.erb within layouts/application (Duration: 30.6ms | Allocations: 3051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 294.6ms | Allocations: 9376)
+Completed 200 OK in 314ms (Views: 294.6ms | ActiveRecord: 5.5ms | Allocations: 10352)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-09-19 09:43:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.erb:14
+  Rendered users/show.erb within layouts/application (Duration: 32.2ms | Allocations: 6813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.5ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 78.4ms | Allocations: 10010)
+Completed 200 OK in 97ms (Views: 83.6ms | ActiveRecord: 1.8ms | Allocations: 11461)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiblZuZG1wME5HOTVhSFU0TVRNMk1YVjFhVEo2WjJwblltYzBkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVh4cGJteHBibVU3SUdacGJHVnVZVzFsUFNKbWJIbGZabWx6YUY5aWRXWm1ZV3h2WDNKcGRtVnlYM1Z1ZEdsMGJHVmtYekF5TkROZk1DNXFabWxtSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkbWJIbGZabWx6YUY5aWRXWm1ZV3h2WDNKcGRtVnlYM1Z1ZEdsMGJHVmtYekF5TkROZk1DNXFabWxtQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NDQ6MjkuNDE3WiIsInB1ciI6ImJsb2Jfa2V5In19--0fe30de87bee61038b78b7d48773683b3f8c6f1a/fly_fish_buffalo_river_untitled_0243_0.jfif" for 127.0.0.1 at 2021-09-19 09:43:35 -0500
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fly_fish_buffalo_river_untitled_0243_0"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 388)
+
+
+Started GET "/users/2/trips/3" for 127.0.0.1 at 2021-09-19 09:43:39 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:48:in `find_trip'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:3
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."trip_id" = ?[0m  [["trip_id", 3]]
+  ↳ app/views/trips/show.erb:17
+  Rendered trips/show.erb within layouts/application (Duration: 31.3ms | Allocations: 4384)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 8036)
+Completed 200 OK in 113ms (Views: 82.6ms | ActiveRecord: 3.1ms | Allocations: 10526)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b4d22cfbf2ed4894589ce872b464aea5c020d9ff/475457-Los-Angeles.webp" for 127.0.0.1 at 2021-09-19 09:43:39 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as */*
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b4d22cfbf2ed4894589ce872b464aea5c020d9ff", "filename"=>"475457-Los-Angeles"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: oreo9vsbfgwpdoyu1qrhynz6fwh7 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM0psYnpsMmMySm1aM2R3Wkc5NWRURnhjbWg1Ym5vMlpuZG9Od1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSTBOelUwTlRjdFRHOXpMVUZ1WjJWc1pYTXVkMlZpY0NJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk5EYzFORFUzTFV4dmN5MUJibWRsYkdWekxuZGxZbkFHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzkzWldKd0Jqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NDg6MzkuODEzWiIsInB1ciI6ImJsb2Jfa2V5In19--8b49ceba7ba98f76f9f1a1ca12073d518b6bb607/475457-Los-Angeles.webp)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM0psYnpsMmMySm1aM2R3Wkc5NWRURnhjbWg1Ym5vMlpuZG9Od1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSTBOelUwTlRjdFRHOXpMVUZ1WjJWc1pYTXVkMlZpY0NJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk5EYzFORFUzTFV4dmN5MUJibWRsYkdWekxuZGxZbkFHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzkzWldKd0Jqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NDg6MzkuODEzWiIsInB1ciI6ImJsb2Jfa2V5In19--8b49ceba7ba98f76f9f1a1ca12073d518b6bb607/475457-Los-Angeles.webp
+Completed 302 Found in 34ms (ActiveRecord: 0.5ms | Allocations: 2040)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM0psYnpsMmMySm1aM2R3Wkc5NWRURnhjbWg1Ym5vMlpuZG9Od1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSTBOelUwTlRjdFRHOXpMVUZ1WjJWc1pYTXVkMlZpY0NJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk5EYzFORFUzTFV4dmN5MUJibWRsYkdWekxuZGxZbkFHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzkzWldKd0Jqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NDg6MzkuODEzWiIsInB1ciI6ImJsb2Jfa2V5In19--8b49ceba7ba98f76f9f1a1ca12073d518b6bb607/475457-Los-Angeles.webp" for 127.0.0.1 at 2021-09-19 09:43:39 -0500
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"475457-Los-Angeles"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/trips/3/photos/new" for 127.0.0.1 at 2021-09-19 09:43:42 -0500
+Processing by PhotosController#new as HTML
+  Parameters: {"trip_id"=>"3"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/new.erb within layouts/application
+  Rendered photos/new.erb within layouts/application (Duration: 28.7ms | Allocations: 1980)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 2050)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.4ms | Allocations: 3738)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00007fb79809bd28>):
+    1: <h1> Add a new photo to <%= @trip.location %> Trip</h1>
+    2: 
+    3: <%= form_for ([@trip, @photo]) do |f| %>
+    4:     <%= f.input :category => %w[Landscape Portrait Food]  %>
+    5:     <%= f.text_field :category %> <br>
+    6: 
+    7:     <%= f.label :file %>
+  
+app/views/photos/new.erb:4
+app/views/photos/new.erb:3
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM0psYnpsMmMySm1aM2R3Wkc5NWRURnhjbWg1Ym5vMlpuZG9Od1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSTBOelUwTlRjdFRHOXpMVUZ1WjJWc1pYTXVkMlZpY0NJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk5EYzFORFUzTFV4dmN5MUJibWRsYkdWekxuZGxZbkFHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzkzWldKd0Jqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NDg6MzkuODEzWiIsInB1ciI6ImJsb2Jfa2V5In19--8b49ceba7ba98f76f9f1a1ca12073d518b6bb607/475457-Los-Angeles.webp" for 127.0.0.1 at 2021-09-19 09:43:43 -0500
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"475457-Los-Angeles"}
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/trips/3/photos/new" for 127.0.0.1 at 2021-09-19 09:45:11 -0500
+Processing by PhotosController#new as HTML
+  Parameters: {"trip_id"=>"3"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/new.erb within layouts/application
+  Rendered photos/new.erb within layouts/application (Duration: 30.7ms | Allocations: 2026)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 2096)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.0ms | Allocations: 3768)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00007fb7c4112de8>):
+    2: 
+    3: <%= form_for ([@trip, @photo]) do |f| %>
+    4:     <%= f.label :category %>
+    5:     <%= f.input :category => %w[Landscape Portrait Food]  %> <br>
+    6: 
+    7:     <%= f.label :file %>
+    8:     <%= f.file_field :file %> <br>
+  
+app/views/photos/new.erb:5
+app/views/photos/new.erb:3
+Started GET "/trips/3/photos/new" for 127.0.0.1 at 2021-09-19 09:45:18 -0500
+Processing by PhotosController#new as HTML
+  Parameters: {"trip_id"=>"3"}
+  [1m[36mTrip Load (9.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/new.erb within layouts/application
+  Rendered photos/new.erb within layouts/application (Duration: 130.1ms | Allocations: 5200)
+  Rendered layout layouts/application.html.erb (Duration: 133.1ms | Allocations: 5270)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 9.6ms | Allocations: 6943)
+
+
+  
+ActionView::Template::Error (undefined method `{:category=>["Landscape", "Portrait", "Food"]}' for #<Photo:0x00007fb7c01a0ed0>):
+    2: 
+    3: <%= form_for ([@trip, @photo]) do |f| %>
+    4:     <%= f.label :category %>
+    5:     <%= f.select :category => %w[Landscape Portrait Food]  %> <br>
+    6: 
+    7:     <%= f.label :file %>
+    8:     <%= f.file_field :file %> <br>
+  
+app/views/photos/new.erb:5
+app/views/photos/new.erb:3
+Started GET "/trips/3/photos/new" for 127.0.0.1 at 2021-09-19 09:47:57 -0500
+Processing by PhotosController#new as HTML
+  Parameters: {"trip_id"=>"3"}
+  [1m[36mTrip Load (2.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/new.erb within layouts/application
+  Rendered photos/new.erb within layouts/application (Duration: 37.6ms | Allocations: 1888)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 1958)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 2.1ms | Allocations: 3630)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fb7b95550f0>::Landscape):
+    2: 
+    3: <%= form_for ([@trip, @photo]) do |f| %>
+    4:     <%= f.label :category %>
+    5:     <%= f.select :category, [Landscape, Portrait, Food]  %> <br>
+    6: 
+    7:     <%= f.label :file %>
+    8:     <%= f.file_field :file %> <br>
+  
+app/views/photos/new.erb:5
+app/views/photos/new.erb:3
+Started GET "/trips/3/photos/new" for 127.0.0.1 at 2021-09-19 09:48:17 -0500
+Processing by PhotosController#new as HTML
+  Parameters: {"trip_id"=>"3"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering photos/new.erb within layouts/application
+  Rendered photos/new.erb within layouts/application (Duration: 30.6ms | Allocations: 926)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 2.1ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 117.1ms | Allocations: 4961)
+Completed 200 OK in 141ms (Views: 127.1ms | ActiveRecord: 0.6ms | Allocations: 6649)
+
+
+Started POST "/trips/3/photos" for 127.0.0.1 at 2021-09-19 09:49:06 -0500
+Processing by PhotosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "photo"=>{"category"=>"Portrait", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7c1005f70 @tempfile=#<Tempfile:/tmp/RackMultipart20210919-5179-n4m2ft.jpg>, @original_filename="LDN-L-VIRUS-LA-BUDGET-005-0415-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[file]\"; filename=\"LDN-L-VIRUS-LA-BUDGET-005-0415-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "trip_id"=>"3"}, "commit"=>"Submit", "trip_id"=>"3"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mPhoto Create (2.9ms)[0m  [1m[32mINSERT INTO "photos" ("category", "trip_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category", "Portrait"], ["trip_id", 3], ["created_at", "2021-09-19 14:49:06.612074"], ["updated_at", "2021-09-19 14:49:06.612074"]]
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Photo"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Photo"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "hyfpgyai1aqhizppi7ajlrsr814c"], ["filename", "LDN-L-VIRUS-LA-BUDGET-005-0415-1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 40122], ["checksum", "wcWOv4+Gc1nNcKK1wrcbCA=="], ["created_at", "2021-09-19 14:49:06.649421"]]
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "file"], ["record_type", "Photo"], ["record_id", 4], ["blob_id", 7], ["created_at", "2021-09-19 14:49:06.662389"]]
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mPhoto Update (0.3ms)[0m  [1m[33mUPDATE "photos" SET "updated_at" = ? WHERE "photos"."id" = ?[0m  [["updated_at", "2021-09-19 14:49:06.672487"], ["id", 4]]
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:19:in `create'
+[36m  Disk Storage (16.2ms) [0m[32mUploaded file to key: hyfpgyai1aqhizppi7ajlrsr814c (checksum: wcWOv4+Gc1nNcKK1wrcbCA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 415302c5-0819-42c9-ac61-cdfe5ab93b59) to Async(default) with arguments: #<GlobalID:0x00007fb7b09fa460 @uri=#<URI::GID gid://travel-photos/ActiveStorage::Blob/7>>
+Redirected to http://127.0.0.1:3000/trips/3
+Completed 302 Found in 194ms (ActiveRecord: 23.1ms | Allocations: 22451)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (13.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [415302c5-0819-42c9-ac61-cdfe5ab93b59] Performing ActiveStorage::AnalyzeJob (Job ID: 415302c5-0819-42c9-ac61-cdfe5ab93b59) from Async(default) enqueued at 2021-09-19T14:49:06Z with arguments: #<GlobalID:0x00007fffcd597ca0 @uri=#<URI::GID gid://travel-photos/ActiveStorage::Blob/7>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [415302c5-0819-42c9-ac61-cdfe5ab93b59] [36m  Disk Storage (3.4ms) [0m[34mDownloaded file from key: hyfpgyai1aqhizppi7ajlrsr814c[0m
+Started GET "/trips/3" for 127.0.0.1 at 2021-09-19 09:49:06 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:48:in `find_trip'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Trip"], ["name", "cover_photo"], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/trips/show.erb:5
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."trip_id" = ?[0m  [["trip_id", 3]]
+  ↳ app/views/trips/show.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Photo"], ["name", "file"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [415302c5-0819-42c9-ac61-cdfe5ab93b59] Skipping image analysis because ImageMagick doesn't support the file
+  ↳ app/views/trips/show.erb:22
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [415302c5-0819-42c9-ac61-cdfe5ab93b59]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/views/trips/show.erb:22
+[ActiveJob] [ActiveStorage::AnalyzeJob] [415302c5-0819-42c9-ac61-cdfe5ab93b59]   [1m[36mActiveStorage::Blob Update (2.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 7]]
+  Rendered trips/show.erb within layouts/application (Duration: 59.1ms | Allocations: 7201)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [415302c5-0819-42c9-ac61-cdfe5ab93b59]   [1m[36mTRANSACTION (14.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [415302c5-0819-42c9-ac61-cdfe5ab93b59] Performed ActiveStorage::AnalyzeJob (Job ID: 415302c5-0819-42c9-ac61-cdfe5ab93b59) from Async(default) in 130.1ms
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.8ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 144.6ms | Allocations: 16608)
+Completed 200 OK in 171ms (Views: 150.0ms | ActiveRecord: 3.8ms | Allocations: 18896)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b4d22cfbf2ed4894589ce872b464aea5c020d9ff/475457-Los-Angeles.webp" for 127.0.0.1 at 2021-09-19 09:49:07 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as */*
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b4d22cfbf2ed4894589ce872b464aea5c020d9ff", "filename"=>"475457-Los-Angeles"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (3.4ms) [0m[34mGenerated URL for file at key: oreo9vsbfgwpdoyu1qrhynz6fwh7 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM0psYnpsMmMySm1aM2R3Wkc5NWRURnhjbWg1Ym5vMlpuZG9Od1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSTBOelUwTlRjdFRHOXpMVUZ1WjJWc1pYTXVkMlZpY0NJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk5EYzFORFUzTFV4dmN5MUJibWRsYkdWekxuZGxZbkFHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzkzWldKd0Jqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NTQ6MDcuMTQ5WiIsInB1ciI6ImJsb2Jfa2V5In19--3b942a14ed629694110c425ab37293e3245c612b/475457-Los-Angeles.webp)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM0psYnpsMmMySm1aM2R3Wkc5NWRURnhjbWg1Ym5vMlpuZG9Od1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSTBOelUwTlRjdFRHOXpMVUZ1WjJWc1pYTXVkMlZpY0NJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk5EYzFORFUzTFV4dmN5MUJibWRsYkdWekxuZGxZbkFHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzkzWldKd0Jqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NTQ6MDcuMTQ5WiIsInB1ciI6ImJsb2Jfa2V5In19--3b942a14ed629694110c425ab37293e3245c612b/475457-Los-Angeles.webp
+Completed 302 Found in 21ms (ActiveRecord: 1.0ms | Allocations: 1449)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c6c5074e0887edad72db6999ae61ade32865f88/LDN-L-VIRUS-LA-BUDGET-005-0415-1.jpg" for 127.0.0.1 at 2021-09-19 09:49:07 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c6c5074e0887edad72db6999ae61ade32865f88", "filename"=>"LDN-L-VIRUS-LA-BUDGET-005-0415-1"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: hyfpgyai1aqhizppi7ajlrsr814c (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSGxtY0dkNVlXa3hZWEZvYVhwd2NHazNZV3BzY25OeU9ERTBZd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWt4RVRpMU1MVlpKVWxWVExVeEJMVUpWUkVkRlZDMHdNRFV0TURReE5TMHhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRFUk9MVXd0VmtsU1ZWTXRURUV0UWxWRVIwVlVMVEF3TlMwd05ERTFMVEV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA5LTE5VDE0OjU0OjA3LjIyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9b4427f3567edf8009cfe66fc193628eacde9a76/LDN-L-VIRUS-LA-BUDGET-005-0415-1.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSGxtY0dkNVlXa3hZWEZvYVhwd2NHazNZV3BzY25OeU9ERTBZd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWt4RVRpMU1MVlpKVWxWVExVeEJMVUpWUkVkRlZDMHdNRFV0TURReE5TMHhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRFUk9MVXd0VmtsU1ZWTXRURUV0UWxWRVIwVlVMVEF3TlMwd05ERTFMVEV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA5LTE5VDE0OjU0OjA3LjIyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9b4427f3567edf8009cfe66fc193628eacde9a76/LDN-L-VIRUS-LA-BUDGET-005-0415-1.jpg
+Completed 302 Found in 28ms (ActiveRecord: 0.5ms | Allocations: 1448)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiM0psYnpsMmMySm1aM2R3Wkc5NWRURnhjbWg1Ym5vMlpuZG9Od1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSTBOelUwTlRjdFRHOXpMVUZ1WjJWc1pYTXVkMlZpY0NJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk5EYzFORFUzTFV4dmN5MUJibWRsYkdWekxuZGxZbkFHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzkzWldKd0Jqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMTlUMTQ6NTQ6MDcuMTQ5WiIsInB1ciI6ImJsb2Jfa2V5In19--3b942a14ed629694110c425ab37293e3245c612b/475457-Los-Angeles.webp" for 127.0.0.1 at 2021-09-19 09:49:07 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSGxtY0dkNVlXa3hZWEZvYVhwd2NHazNZV3BzY25OeU9ERTBZd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWt4RVRpMU1MVlpKVWxWVExVeEJMVUpWUkVkRlZDMHdNRFV0TURReE5TMHhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRFUk9MVXd0VmtsU1ZWTXRURUV0UWxWRVIwVlVMVEF3TlMwd05ERTFMVEV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA5LTE5VDE0OjU0OjA3LjIyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9b4427f3567edf8009cfe66fc193628eacde9a76/LDN-L-VIRUS-LA-BUDGET-005-0415-1.jpg" for 127.0.0.1 at 2021-09-19 09:49:07 -0500
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"475457-Los-Angeles"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"LDN-L-VIRUS-LA-BUDGET-005-0415-1"}
+Completed 200 OK in 37ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+

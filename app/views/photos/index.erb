@@ -3,7 +3,7 @@
  <h1> All Photos </h2>
 
 <% @photos.each do |photo| %>
-    <%= image_tag photo.file, :style => "max-height:300px" %> 
-    <%= photo.category %><br>
+    <%= image_tag photo.file, :style => "max-height:300px" %> <br>
+    Tag: <%= photo.category %><br>
     <%= button_to "Delete Photo",  photo_path(photo), method: :delete %> <br>
 <% end %>
