@@ -1,6 +1,8 @@
   
 <h1> Edit <%= @trip.location %> </h1>
 
+<%= render partial: "form", locals: {location: @location, date: @date, private: @private, user_id: @user_id, action: "Edit"} %>
+
 <%= button_to "Delete trip",  trip_path(@trip), method: :delete %> <br>
 
 <%= link_to "Cancel", trip_path(@trip) %>

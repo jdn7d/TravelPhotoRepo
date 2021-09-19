@@ -23,6 +23,11 @@ class PhotosController < ApplicationController
         end
     end
 
+    def destroy 
+        @photo.destroy
+        redirect_to '/photos'
+    end
+
     private 
 
     def find_photo 
