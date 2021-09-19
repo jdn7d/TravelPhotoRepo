@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy     
-      session.delete :designer_id
+      session.delete :user_id
       redirect_to '/signin' 
     end  
       

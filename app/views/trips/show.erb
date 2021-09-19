@@ -1,21 +1,30 @@
 <h1> Location: <%= @trip.location %> </h1>
-<h2> Date Visited: <%= @trip.date %> </h2>
 
+<% if !@trip.cover_photo.blank? %> 
 
 <%= image_tag @trip.cover_photo, :style => "max-height:300px"%>
+<% end %>
+
+<h2> Date Visited: <%= @trip.date %> </h2>
+<h2> Private Photo: <%= @trip.private %> </h2>
 
 
-<h2> More Photos </h2>
 
+
+
+<h2> Gallery </h2>
+
+<% if @trip.photos.blank? %> 
+    <h3> No photos yet </h3>
+  
+<% else %>
 <% @trip.photos.each do |photo| %>
     <%= image_tag photo.file, :style => "max-height:300px"%> <br>
     Tag: <%= photo.category %> <br>
-    
- <% end %> <br>
-
-<%= link_to "Public Profile", trips_path(@user) %> <br>
+<% end %>
+<% end %> <br>
  
-<%= link_to "Add a photo", new_trip_photo_path(@trip) %> <br>
+<%= link_to "Add a photo to gallery", new_trip_photo_path(@trip) %> <br>
 
 
 

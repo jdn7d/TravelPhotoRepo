@@ -10,19 +10,16 @@
     <% @user.trips.each do |trip| %>
         <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
     <% end %> <br>
+    
+    <%= link_to "Add a trip", new_user_trip_path(@user) %> <br>
 <% else %>
     <% @user.trips.each do |trip| %>
         <% if trip.private == false %>
-        <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
+            <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
+        <% else %>
+        
     <% end %>
     <% end %> <br>
 <% end %>
 
-<script>
- console.log(current_user);
-</script>
 
-
-<%= link_to "Add a trip", new_user_trip_path(@user) %> <br>
-
-<%= link_to "Public Profile", trips_path(@user) %> <br>
