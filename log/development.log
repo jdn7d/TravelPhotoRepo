@@ -18333,3 +18333,130 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 46ms (Views: 36.8ms | ActiveRecord: 0.9ms | Allocations: 8038)
 
 
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 20:03:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  Rendered users/show.erb within layouts/application (Duration: 10.0ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 1352)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.2ms | Allocations: 8520)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1> <%= @user.username %>'s Dashboard </h1>
+
+
+
+<h2> Saved Trips </h2>
+<h3> Click on a trip for more information and photos </h3>
+
+<% if @user = current_user %>
+    <% @user.trips.each do |trip| %>
+        <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
+    <% end %> <br>
+<% else %>
+    <% for @user.trips.private == false %>
+    <% @user.trips.each do |trip| %>
+        <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
+    <% end %>
+    <% end %> <br>
+<% end %>
+
+<script>
+ console.log(current_user);
+</script>
+
+
+<%= link_to "Add a trip", new_user_trip_path(@user) %> <br>
+
+<%= link_to "Public Profile", trips_path(@user) %> <br>
+):
+1:    
+2:    <h1> <%= @user.username %>'s Dashboard </h1>
+3:    
+4:    
+5:    
+6:    <h2> Saved Trips </h2>
+7:    <h3> Click on a trip for more information and photos </h3>
+8:    
+9:    <% if @user = current_user %>
+10:        <% @user.trips.each do |trip| %>
+11:            <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
+12:        <% end %> <br>
+13:    <% else %>
+14:        <% for @user.trips.private == false %>
+15:        <% @user.trips.each do |trip| %>
+16:            <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
+17:        <% end %>
+18:        <% end %> <br>
+19:    <% end %>
+20:    
+21:    <script>
+22:     console.log(current_user);
+23:    </script>
+24:    
+25:    
+26:    <%= link_to "Add a trip", new_user_trip_path(@user) %> <br>
+27:    
+28:    <%= link_to "Public Profile", trips_path(@user) %> <br>
+  
+app/views/users/show.erb:14: syntax error, unexpected ==, expecting '.' or &. or :: or '['
+app/views/users/show.erb:30: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.erb:14: syntax error, unexpected ==, expecting '.' or &. or :: or '['
+app/views/users/show.erb:30: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.erb:14: syntax error, unexpected ==, expecting '.' or &. or :: or '['
+app/views/users/show.erb:30: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.erb:14: syntax error, unexpected ==, expecting '.' or &. or :: or '['
+app/views/users/show.erb:30: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.erb:14: syntax error, unexpected ==, expecting '.' or &. or :: or '['
+app/views/users/show.erb:30: syntax error, unexpected end, expecting end-of-input
+app/views/users/show.erb:14: syntax error, unexpected ==, expecting '.' or &. or :: or '['
+app/views/users/show.erb:30: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 20:03:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:10
+  Rendered users/show.erb within layouts/application (Duration: 26.5ms | Allocations: 8723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.5ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 12431)
+Completed 200 OK in 61ms (Views: 54.4ms | ActiveRecord: 1.4ms | Allocations: 14634)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-18 20:03:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:10
+  Rendered users/show.erb within layouts/application (Duration: 20.7ms | Allocations: 2045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.5ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 5851)
+Completed 200 OK in 49ms (Views: 39.5ms | ActiveRecord: 1.0ms | Allocations: 8054)
+
+
