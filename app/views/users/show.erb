@@ -11,8 +11,8 @@
         <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
     <% end %> <br>
 <% else %>
-    <% if @user.trips.private == false %>
     <% @user.trips.each do |trip| %>
+        <% if trip.private == false %>
         <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
     <% end %>
     <% end %> <br>
