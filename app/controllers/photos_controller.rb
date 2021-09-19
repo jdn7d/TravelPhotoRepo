@@ -9,7 +9,6 @@ class PhotosController < ApplicationController
     def new 
         @trip = Trip.find_by_id(params[:trip_id] )
         @photo = Photo.new
-        
     end
 
 

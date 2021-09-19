@@ -9,9 +9,8 @@
 User.create(email: 'j@gmail.com', username: 'Jess', password: 'hi')
 User.create(email: 'bill@gmail.com', username: 'Bill', password: 'hi')
 
-Trip.create(location: 'Denver', date: 'Aug 2021', user: User.first)
-Trip.create(location: 'LA', date: 'Aug 2020', user: User.first)
-
+Trip.create(location: 'Denver', date: 'Aug 2021', private: false, user: User.first)
+Trip.create(location: 'LA', date: 'Aug 2020', private: false, user: User.first)
+Trip.create(location: 'Bora Bora - private', date: 'April 2021', private: true, user: User.first)
 Trip.create(location: 'New York', date: 'May 2018', user: User.last)
 
-Photo.create(category: 'landscape', trip_id: 1)

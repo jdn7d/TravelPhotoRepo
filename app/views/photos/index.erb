@@ -1,3 +1,8 @@
+
+
+ <h1> All Photos </h2>
+
 <% @photos.each do |photo| %>
     <%= photo.category %>
- <% end %> <br>
+    <%= image_tag photo.file, :style => "max-height:300px" %>
+<% end %>

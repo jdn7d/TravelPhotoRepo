@@ -1,24 +1,34 @@
 
-<h1> <%= @user.username %>'s Dashboard </h1>
 
 
 
-<h2> Saved Trips </h2>
-<h3> Click on a trip for more information and photos </h3>
+
+
+
 
 <% if @user == current_user %>
+    <h1> Welcome to your account, <%= @user.username %></h1>    
+    <h2> Your Saved Trips </h2>
+    <h3> Click on a trip for more information and photos </h3>
+    
     <% @user.trips.each do |trip| %>
         <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
     <% end %> <br>
-    
+
     <%= link_to "Add a trip", new_user_trip_path(@user) %> <br>
+    <%= link_to "All photos", user_photos_path(@user) %> <br>
+
 <% else %>
+
+    <h1> <%= @user.username %>'s Dashboard </h1>
+
+    <h2> Saved Trips </h2>
+    <h3> Click on a trip for more information and photos </h3>
     <% @user.trips.each do |trip| %>
         <% if trip.private == false %>
             <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
         <% else %>
-        
-    <% end %>
+        <% end %>
     <% end %> <br>
 <% end %>
 
