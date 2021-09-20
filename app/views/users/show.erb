@@ -1,12 +1,6 @@
 
+<% if logged_in? %>
 
-
-
-
-
-
-
-<% if @user == current_user %>
     <h1> Welcome to your account, <%= @user.username %></h1>    
     <h2> Your Saved Trips </h2>
     <h3> Click on a trip for more information and photos </h3>
@@ -21,13 +15,12 @@
 <% else %>
 
     <h1> <%= @user.username %>'s Dashboard </h1>
-
     <h2> Saved Trips </h2>
     <h3> Click on a trip for more information and photos </h3>
+
     <% @user.trips.each do |trip| %>
         <% if trip.private == false %>
             <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
-        <% else %>
         <% end %>
     <% end %> <br>
 <% end %>

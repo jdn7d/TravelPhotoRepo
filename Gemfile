@@ -12,6 +12,10 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'    #gem to use in development-test environment
 end
 
+group :development, :test do
+  gem 'rspec-rails', ">= 3.9.0"
+end
+
 group :production do 
  gem 'pg'         #gem to use in production environment
 end

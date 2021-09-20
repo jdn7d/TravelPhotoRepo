@@ -1,0 +1,15 @@
+current directory: /mnt/c/Users/donov/Shopify/TravelPhotoRepo/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/jss/.rvm/rubies/ruby-2.6.1/bin/ruby -I /home/jss/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210920-1474-1fp0xh3.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/c/Users/donov/Shopify/TravelPhotoRepo/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /mnt/c/Users/donov/Shopify/TravelPhotoRepo/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /mnt/c/Users/donov/Shopify/TravelPhotoRepo/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20210920-1474-kfmq5t
