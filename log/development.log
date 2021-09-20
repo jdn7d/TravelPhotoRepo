@@ -30396,3 +30396,182 @@ Completed 200 OK in 85ms (Views: 74.4ms | ActiveRecord: 1.8ms | Allocations: 128
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
   [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2021-09-20 09:47:32 -0500
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (Duration: 11.6ms | Allocations: 760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 3.7ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 176.0ms | Allocations: 8682)
+Completed 200 OK in 246ms (Views: 209.2ms | ActiveRecord: 0.0ms | Allocations: 11584)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-09-20 09:47:36 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 109.7ms | Allocations: 3832)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 126.2ms | Allocations: 7493)
+Completed 200 OK in 190ms (Views: 129.6ms | ActiveRecord: 0.6ms | Allocations: 14622)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-09-20 09:47:46 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jssdnvn@gmail.com", "username"=>"hi", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jssdnvn@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.erb within layouts/application
+  Rendered users/new.erb within layouts/application (Duration: 3.1ms | Allocations: 1679)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 5275)
+Completed 200 OK in 230ms (Views: 25.7ms | ActiveRecord: 0.4ms | Allocations: 9918)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-09-20 09:49:17 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jssdnvn@gmail.com", "username"=>"hi", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jssdnvn@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (3.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "hi"], ["email", "jssdnvn@gmail.com"], ["password_digest", "$2a$12$xeaHjnxV9ezoBlQTHg52leS4wM5XNMv.YseVMogZzsEpAEPiD2Dl6"], ["created_at", "2021-09-20 14:49:17.712763"], ["updated_at", "2021-09-20 14:49:17.712763"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/5
+Completed 302 Found in 233ms (ActiveRecord: 11.7ms | Allocations: 6174)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2021-09-20 09:49:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.erb:14
+  Rendered users/show.erb within layouts/application (Duration: 133.1ms | Allocations: 10373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 145.4ms | Allocations: 13523)
+Completed 200 OK in 151ms (Views: 146.1ms | ActiveRecord: 1.1ms | Allocations: 14713)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-09-20 09:49:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.erb:27
+  Rendered users/show.erb within layouts/application (Duration: 12.4ms | Allocations: 1780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.4ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 5448)
+Completed 200 OK in 50ms (Views: 45.1ms | ActiveRecord: 1.0ms | Allocations: 7129)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-09-20 09:49:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.erb:27
+  Rendered users/show.erb within layouts/application (Duration: 7.8ms | Allocations: 1422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 4669)
+Completed 200 OK in 36ms (Views: 28.1ms | ActiveRecord: 1.5ms | Allocations: 5591)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-20 09:49:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:27
+  Rendered users/show.erb within layouts/application (Duration: 9.6ms | Allocations: 1421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.5ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 4691)
+Completed 200 OK in 45ms (Views: 37.4ms | ActiveRecord: 1.1ms | Allocations: 5627)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-09-20 09:49:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.erb:27
+  Rendered users/show.erb within layouts/application (Duration: 11.8ms | Allocations: 1419)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 4663)
+Completed 200 OK in 66ms (Views: 58.1ms | ActiveRecord: 1.0ms | Allocations: 5583)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2021-09-20 09:49:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms | Allocations: 1094)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2021-09-20 09:49:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.erb:27
+  Rendered users/show.erb within layouts/application (Duration: 6.9ms | Allocations: 1489)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 4870)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 1.7ms | Allocations: 5933)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
