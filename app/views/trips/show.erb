@@ -23,8 +23,16 @@
 <% end %>
 <% end %> <br>
  
-<%= link_to "Add a photo to gallery", new_trip_photo_path(@trip) %> <br>
+
 
 
 
  
+<% if logged_in? %>
+<%= link_to "Add a photo to gallery", new_trip_photo_path(@trip) %> <br>
+
+<% else %>
+
+<% end %>
+
+

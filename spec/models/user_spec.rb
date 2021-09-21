@@ -9,6 +9,8 @@ RSpec.describe User, :type => :model do
        )
   }
     
+  it "is_expected.to be_an_instance_of(ActiveStorage::Attached::One)"
+
   it "is valid with valid attributes" do
     expect(subject).to be_valid
   end
