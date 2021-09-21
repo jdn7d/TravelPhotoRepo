@@ -15,7 +15,7 @@ class TripsController < ApplicationController
         @user = User.find_by_id(params[:user_id] )
         @trip = Trip.new(trip_params)
         if @trip.save 
-            redirect_to trip_path(@trip)
+            redirect_to user_trip_path(@user, @trip)
         else
             render :new
         end
@@ -23,7 +23,6 @@ class TripsController < ApplicationController
 
     def show
         @user = User.find_by_id(params[:user_id] )
-  
     end
 
 

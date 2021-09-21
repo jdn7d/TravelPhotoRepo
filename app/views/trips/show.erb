@@ -20,13 +20,10 @@
 <% @trip.photos.each do |photo| %>
     <%= image_tag photo.file, :style => "max-height:300px"%> <br>
     Tag: <%= photo.category %> <br>
+  
 <% end %>
 <% end %> <br>
  
-
-
-
-
  
 <% if logged_in? %>
 <%= link_to "Add a photo to gallery", new_trip_photo_path(@trip) %> <br>
