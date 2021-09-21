@@ -8,8 +8,9 @@
     <%= f.text_field :username %> <br>
  
     <%= f.label :password %>
-    <%= f.password_field :password %> <br>
- 
+    <%= f.password_field :password %> 
+    <p>Password must be at least 6 characters </p>
+
     <%= f.submit "Submit" %> <br>
     <%= link_to "Already have an accout", new_session_path %> <br>
  

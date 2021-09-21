@@ -10,6 +10,7 @@ class UsersController < ApplicationController
            session[:user_id] = @user.id
            redirect_to @user
         else 
+         flash[:alert] = "User not found."
            render :new
         end   
      end
