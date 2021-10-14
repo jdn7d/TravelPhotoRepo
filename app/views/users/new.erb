@@ -1,5 +1,12 @@
 <h1> Signup </h1>
 
+<% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |message|%>
+  <h3 style="color:red" ><%= message %> </h3>
+  <%end%>
+<%end%>
+
+</br>
 <%= form_for @user, url:'/signup' do |f| %>
     <%= f.label :email %>
     <%= f.email_field :email %> <br>

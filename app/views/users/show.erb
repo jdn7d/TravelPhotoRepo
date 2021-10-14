@@ -7,6 +7,7 @@
     
     <% @user.trips.each do |trip| %>
         <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
+        <%= link_to "Delete Trip ", user_trip_path(@user, trip), :method => :delete %>
     <% end %> <br>
 
     <%= link_to "Add a trip", new_user_trip_path(@user) %> <br>
@@ -15,13 +16,13 @@
 <% else %>
 
     <h1> <%= @user.username %>'s Dashboard </h1>
-    <h2> Saved Trips </h2>
+    <h2> Their Saved Trips </h2>
     <h3> Click on a trip for more information and photos </h3>
 
     <% @user.trips.each do |trip| %>
         <% if trip.private == false %>
             <li><%= link_to trip.location, user_trip_path(@user, trip) %></li>
-        <% end %>
+            <% end %>
     <% end %> <br>
 <% end %>
 

@@ -5,9 +5,11 @@
 <%= image_tag @trip.cover_photo, :style => "max-height:300px"%>
 <% end %>
 
-<h2> Private Trip: <%= @trip.private %> </h2>
-
-
+<% if @trip.private %> 
+    <h3> This trip is private </h3>
+    <% else %>
+    <h3> This trip is not private </h3>
+<% end %>
 
 
 
@@ -18,9 +20,11 @@
   
 <% else %>
 <% @trip.photos.each do |photo| %>
-    <%= image_tag photo.file, :style => "max-height:300px"%> <br>
+    <%= link_to photo_path do %>
+        <%= image_tag photo.file, :style => "max-height:300px"%> <br>
+    <% end %>
     Tag: <%= photo.category %> <br>
-  
+   
 <% end %>
 <% end %> <br>
  

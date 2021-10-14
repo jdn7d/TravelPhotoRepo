@@ -11,7 +11,6 @@ class PhotosController < ApplicationController
         @photo = Photo.new
     end
 
-
     def create 
         
         @trip = Trip.find_by_id(params[:trip_id] )
@@ -22,6 +21,9 @@ class PhotosController < ApplicationController
             render :new
         end
     end
+
+    def show 
+    end 
 
     def destroy 
         @photo.destroy
